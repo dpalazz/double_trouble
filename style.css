@@ -35,15 +35,16 @@ body {
   text-align: center;
 }
 
-.safe-place {
+.col-1 > .safe-place {
   display: inline-block;
   margin: 10px auto;
+  background: green;
 }
 
 .middle-board {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content :center;
 
 }
 
@@ -89,4 +90,10 @@ h1 {
 
 .col-6 {
   text-align: center;
+}
+
+.col-6 > .safe-place {
+  display: inline-block;
+  margin: 10px auto;
+  background: yellow;
 }
