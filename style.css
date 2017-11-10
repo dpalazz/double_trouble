@@ -7,16 +7,52 @@ body {
 .container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 #logo {
   width: 450px;
   height: 200px;
-  margin: 20px;
+  margin: 25px auto;
+}
+
+.main-board-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 4px solid brown;
+  border-radius: 25px;
+  width: 950px;
+  height: 950px;
+  margin: auto;
+}
+
+.player {
+  border: 4px solid brown;
+  border-radius: 25px;
+  width: 200px;
+  height: 50px;
+  margin: 10px auto;
 }
 
 h1 {
   font-family: sans-serif;
-  font-size: 50px;
-  color: red;
+  font-size: 40px;
+  color: brown;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.safe-place {
+  border: 4px solid brown;
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+}
+
+.board-div {
+  border: 4px solid brown;
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
 }
