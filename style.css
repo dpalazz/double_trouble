@@ -16,7 +16,7 @@ body {
   margin: 25px auto;
 }
 
-button {
+#openModal {
   width: 20%;
   margin: auto;
   margin-bottom: 20px;
@@ -26,6 +26,32 @@ button {
   background-color: brown;
   border-radius: 25px;
   padding: 5px;
+}
+
+#modal {
+	background-color: rgba(0, 0, 0, .4);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	overflow: auto;
+  display: none;
+}
+
+#modal-textbox {
+	background-color: white;
+	height: 400px;
+	width: 400px;
+	border-radius: 2px;
+  padding: 20px;
+	margin: 300px auto;
+}
+
+#close {
+  color: brown;
+  padding: 10px;
 }
 
 .main-board-container {
