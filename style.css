@@ -16,6 +16,18 @@ body {
   margin: 25px auto;
 }
 
+button {
+  width: 20%;
+  margin: auto;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-family: "Gotham Rounded", Verdana;
+  color: white;
+  background-color: brown;
+  border-radius: 25px;
+  padding: 5px;
+}
+
 .main-board-container {
   display: flex;
   flex-direction: column;
@@ -38,7 +50,7 @@ body {
 .col-1 > .safe-place {
   display: inline-block;
   margin: 10px auto;
-  background: green;
+  /*background: green;*/
 }
 
 .middle-board {
@@ -76,16 +88,23 @@ h1 {
 
 .safe-place {
   border: 4px solid brown;
-  border-radius: 25px;
+  border-radius: 30px;
   width: 50px;
   height: 50px;
 }
 
 .board-div {
   border: 4px solid brown;
-  border-radius: 25px;
+  border-radius: 30px;
   width: 50px;
   height: 50px;
+}
+
+.popper {
+  border: 4px solid rgb(66, 36, 17);
+  border-radius: 30px;
+  background-image: linear-gradient(rgb(66, 36, 17), rgb(235,232,228));
+  margin-left: 50px;
 }
 
 .col-6 {
@@ -95,5 +114,5 @@ h1 {
 .col-6 > .safe-place {
   display: inline-block;
   margin: 10px auto;
-  background: yellow;
+  /*background: yellow;*/
 }
