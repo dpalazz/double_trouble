@@ -54,14 +54,25 @@ body {
   padding: 10px;
 }
 
+#start {
+  width: 20%;
+  margin: auto;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-family: "Gotham Rounded", Verdana;
+  color: white;
+  background-color: brown;
+  border-radius: 25px;
+  padding: 5px;
+}
+
 .main-board-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   border: 4px solid brown;
   border-radius: 25px;
-  width: 960px;
-  height: 760px;
+  width: 90%;
   margin: auto;
 }
 
@@ -129,7 +140,7 @@ h1 {
 .popper {
   border: 4px solid rgb(66, 36, 17);
   border-radius: 30px;
-  background-image: linear-gradient(rgb(66, 36, 17), rgb(235,232,228));
+  background-color: white;
   margin-left: 50px;
 }
 
