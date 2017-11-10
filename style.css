@@ -27,6 +27,21 @@ body {
   margin: auto;
 }
 
+.top-board {
+  border: 4px solid brown;
+  margin: auto;
+}
+
+.middle-board {
+  display: flex;
+  flex-direction: row;
+}
+
+.bottom-board {
+  border: 4px solid brown;
+  margin: auto;
+}
+
 .player {
   border: 4px solid brown;
   border-radius: 25px;
