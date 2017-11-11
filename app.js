@@ -1,12 +1,13 @@
 $(() => {
+
   // **************************************************************************
-  // * Global Variables
+  // * Global Variables (Consts, Lets, Functions, Arrays, etc.)
   // **************************************************************************
   const $modal = $("#modal");
   const $closeButton = $("#close");
   const $popper = $(".player");
 
-  let generateRollNumber = () => {
+  const generateRollNumber = () => {
     let $rollNumber = $("<h1>").text(parseInt(Math.floor(Math.random() * (9-1) + 1)))
     .appendTo($("#roll-number-textbox"));
     setTimeout( () => {
@@ -17,6 +18,17 @@ $(() => {
 
   const $closeRollNumberModal = () => {
     $("#roll-number-modal").css("display", "none");
+  };
+
+  const $player1 = {
+    pawnOnePosition: "safe",
+    pawnTwoPosition: "safe"
+  };
+
+  const $player2 = {
+    safePawns: 2,
+    pawnOnePosition: "safe",
+    pawnTwoPosition: "safe"
   };
 
   // **************************************************************************
@@ -35,7 +47,7 @@ $(() => {
   };
 
   // *****************
-  // * For the Popper
+  // * For the Start
   // *****************
   const startGame = () => {
     $(".col-1").children().css("background-color", "yellow");
@@ -54,6 +66,12 @@ $(() => {
   const $closePopper = () => {
     $("#popper-modal").css("display", "none");
   };
+
+  // **************************************************************************
+  // * Game Play
+  // **************************************************************************
+
+
 
   // **************************************************************************
   // * Event Listeners
