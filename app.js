@@ -6,6 +6,12 @@ $(() => {
   const $closeButton = $("#close");
   const $popper = $(".player");
 
+  // let generateRollNumber = () => {
+  //   Math.floor(Math.random() * (9-1) + 1);
+  //   let $rollNumber = $("<div>").append($("#modal-box"));
+  //   $popPopper();
+  // };
+
   // **************************************************************************
   // * Event Handlers
   // **************************************************************************
@@ -32,10 +38,15 @@ $(() => {
   // *****************
   // * For the Popper
   // *****************
-  const popPopper = (event) => {
-    // console.log($(".player"));
-    $(event.target).css("background", "white");
-    // setTimeout(popPopper() {$(."player").css("display", "none")}, 4000);
+  const $popPopper = () => {
+    $("#popper-modal").css("display", "block");
+    setTimeout($closePopper, 1000);
+    // generateRollNumber();
+  };
+
+  const $closePopper = () => {
+    console.log("before");
+    $("#popper-modal").css("display", "none");
   };
 
   // **************************************************************************
@@ -56,7 +67,7 @@ $(() => {
   // *****************
   // * For the Popper
   // *****************
-  $(".player").on("click", popPopper);
+  $(".player").on("click", $popPopper);
 
 
 
