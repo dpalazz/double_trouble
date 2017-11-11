@@ -6,11 +6,11 @@ $(() => {
   const $closeButton = $("#close");
   const $popper = $(".player");
 
-  // let generateRollNumber = () => {
-  //   Math.floor(Math.random() * (9-1) + 1);
-  //   let $rollNumber = $("<div>").append($("#modal-box"));
-  //   $popPopper();
-  // };
+  let generateRollNumber = () => {
+    let $rollNumber = $("<h1>").text(parseInt(Math.floor(Math.random() * (9-1) + 1)));
+    $rollNumber.appendTo($("#roll-number-textbox"));
+    console.log($("#roll-number-textbox"));
+  };
 
   // **************************************************************************
   // * Event Handlers
@@ -41,11 +41,10 @@ $(() => {
   const $popPopper = () => {
     $("#popper-modal").css("display", "block");
     setTimeout($closePopper, 1000);
-    // generateRollNumber();
+    generateRollNumber();
   };
 
   const $closePopper = () => {
-    console.log("before");
     $("#popper-modal").css("display", "none");
   };
 
