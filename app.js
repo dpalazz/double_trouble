@@ -2,10 +2,9 @@ $(() => {
   // **************************************************************************
   // * Global Variables
   // **************************************************************************
-
-  const $openBtn = $('#openModal');
-  const $modal = $('#modal');
-  const $closeBtn = $('#close');
+  const $modal = $("#modal");
+  const $closeButton = $("#close");
+  const $popper = $(".player");
 
   // **************************************************************************
   // * Event Handlers
@@ -15,11 +14,11 @@ $(() => {
   // * For Instruction Modal
   // *************************
   const openModal = () => {
-    $modal.css('display', 'block');
+    $modal.css("display", "block");
   };
 
   const closeModal = () => {
-    $modal.css('display', 'none');
+    $modal.css("display", "none");
   };
 
   // *****************
@@ -33,8 +32,10 @@ $(() => {
   // *****************
   // * For the Popper
   // *****************
-  const popPopper = () => {
-    $(".popper").css("background-color", "black");
+  const popPopper = (event) => {
+    // console.log($(".player"));
+    $(event.target).css("background", "white");
+    // setTimeout(popPopper() {$(."player").css("display", "none")}, 4000);
   };
 
   // **************************************************************************
@@ -45,7 +46,7 @@ $(() => {
   // * For Instruction Modal
   // ************************
   $("#openModal").on("click", openModal);
-  $closeBtn.on('click', closeModal);
+  $closeButton.on('click', closeModal);
 
   // ********
   // * Start
@@ -55,7 +56,7 @@ $(() => {
   // *****************
   // * For the Popper
   // *****************
-  $(".popper").on("click", popPopper);
+  $(".player").on("click", popPopper);
 
 
 
