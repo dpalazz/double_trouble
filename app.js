@@ -9,7 +9,12 @@ $(() => {
   let generateRollNumber = () => {
     let $rollNumber = $("<h1>").text(parseInt(Math.floor(Math.random() * (9-1) + 1)));
     $rollNumber.appendTo($("#roll-number-textbox"));
-    console.log($("#roll-number-textbox"));
+    $("#roll-number-modal").css("display", "block");
+    setTimeout($closeRollNumberModal, 1000);
+  };
+
+  const $closeRollNumberModal = () => {
+    $("#roll-number-modal").css("display", "none");
   };
 
   // **************************************************************************
