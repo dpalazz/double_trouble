@@ -7,6 +7,16 @@ $(() => {
   const $closeButton = $("#close");
   const $popper = $(".player");
 
+  const $player1 = {
+    pawnOnePosition: "safe",
+    pawnTwoPosition: "safe"
+  };
+
+  const $player2 = {
+    pawnOnePosition: "safe",
+    pawnTwoPosition: "safe"
+  };
+
   const generateRollNumber = () => {
     let $rollNumber = $("<h1>").text(parseInt(Math.floor(Math.random() * (9-1) + 1)))
     .appendTo($("#roll-number-textbox"));
@@ -18,17 +28,7 @@ $(() => {
 
   const $closeRollNumberModal = () => {
     $("#roll-number-modal").css("display", "none");
-  };
-
-  const $player1 = {
-    pawnOnePosition: "safe",
-    pawnTwoPosition: "safe"
-  };
-
-  const $player2 = {
-    safePawns: 2,
-    pawnOnePosition: "safe",
-    pawnTwoPosition: "safe"
+    $("#roll-number-textbox").text("");
   };
 
   // **************************************************************************
@@ -70,7 +70,6 @@ $(() => {
   // **************************************************************************
   // * Game Play
   // **************************************************************************
-
 
 
   // **************************************************************************
