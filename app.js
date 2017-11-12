@@ -41,23 +41,59 @@ $(() => {
       $("#player1-safe-1").css("background-color", "");
       $player1[Object.keys($player1)[0]] = "out";
       if ($arrayOfDieNums[0] === "1") {
-        $("#one").css("background-color", "green");
+        if ($("#one").css("background-color") === "rgb(255, 255, 0)") {
+          console.log("it's yellow");
+        } else {
+          $("#one").css("background-color", "green");
+        }
       } else if ($arrayOfDieNums[0] === "2") {
-        $("#two").css("background-color", "green");
+        if ($("#two").css("background-color") === "rgb(255, 255, 0)") {
+          console.log("it's yellow");
+        } else {
+          $("#two").css("background-color", "green");
+        }
       } else if ($arrayOfDieNums[0] === "3") {
-        $("#three").css("background-color", "green");
+        if ($("#three").css("background-color") === "rgb(255, 255, 0)") {
+          console.log("it's yellow");
+        } else {
+          $("#three").css("background-color", "green");
+        }
       } else if ($arrayOfDieNums[0] === "4") {
-        $("#four").css("background-color", "green");
+        if ($("#four").css("background-color") === "rgb(255, 255, 0)") {
+          console.log("it's yellow");
+        } else {
+          $("#four").css("background-color", "green");
+        }
       } else if ($arrayOfDieNums[0] === "5") {
-        $("#five").css("background-color", "green");
+        if ($("#five").css("background-color") === "rgb(255, 255, 0)") {
+          console.log("it's yellow");
+        } else {
+          $("#five").css("background-color", "green");
+        }
       } else if ($arrayOfDieNums[0] === "6") {
-        $("#six").css("background-color", "green");
+        if ($("#six").css("background-color") === "rgb(255, 255, 0)") {
+          console.log("it's yellow");
+        } else {
+          $("#six").css("background-color", "green");
+        }
       } else if ($arrayOfDieNums[0] === "7") {
-        $("#seven").css("background-color", "green");
+        if ($("#seven").css("background-color") === "rgb(255, 255, 0)") {
+          console.log("it's yellow");
+        } else {
+          $("#seven").css("background-color", "green");
+        }
       } else if ($arrayOfDieNums[0] === "8") {
-        $("#eight").css("background-color", "green");
+        if ($("#eight").css("background-color") === "rgb(255, 255, 0)") {
+          console.log("it's yellow");
+        } else {
+          $("#eight").css("background-color", "green");
+        }
       } else if ($arrayOfDieNums[0] === "9") {
-        $("#nine").css("background-color", "green");
+        if ($("#nine").css("background-color") === "rgb(255, 255, 0)") {
+          console.log("it's yellow");
+        } else {
+          $("#nine").css("background-color", "green");
+        }
       } else {
         console.log("I'm confused.");
       }
@@ -65,73 +101,55 @@ $(() => {
       $("#player2-safe-1").css("background-color", "");
       $player2[Object.keys($player2)[0]] = "out";
       if ($arrayOfDieNums[0] === "1") {
-        if ($("#one").css("background-color") === "yellow") {
-          alert("Oops, let's roll again. That space is already taken by your own game piece");
-        } else if ($("#one").css("background-color") === "rgb(0, 128, 0)") {
+        if ($("#one").css("background-color") === "rgb(0, 128, 0)") {
           console.log("it's green");
         } else {
           $("#one").css("background-color", "yellow");
         }
       } else if ($arrayOfDieNums[0] === "2") {
-        if ($("#two").css("background-color") === "yellow") {
-          alert("Oops, let's roll again. That space is already taken by your own game piece");
-        } else if ($("#two").css("background-color") === "rgb(0, 128, 0)") {
+        if ($("#two").css("background-color") === "rgb(0, 128, 0)") {
           console.log("it's green");
         } else {
           $("#two").css("background-color", "yellow");
         }
       } else if ($arrayOfDieNums[0] === "3") {
-        if ($("#three").css("background-color") === "yellow") {
-          alert("Oops, let's roll again. That space is already taken by your own game piece");
-        } else if ($("#three").css("background-color") === "rgb(0, 128, 0)") {
+        if ($("#three").css("background-color") === "rgb(0, 128, 0)") {
           console.log("it's green");
         } else {
           $("#three").css("background-color", "yellow");
         }
       } else if ($arrayOfDieNums[0] === "4") {
-        if ($("#four").css("background-color") === "yellow") {
-          alert("Oops, let's roll again. That space is already taken by your own game piece");
-        } else if ($("#four").css("background-color") === "rgb(0, 128, 0)") {
+        if ($("#four").css("background-color") === "rgb(0, 128, 0)") {
           console.log("it's green");
         } else {
           $("#four").css("background-color", "yellow");
         }
       } else if ($arrayOfDieNums[0] === "5") {
-        if ($("#five").css("background-color") === "yellow") {
-          alert("Oops, let's roll again. That space is already taken by your own game piece");
-        } else if ($("#five").css("background-color") === "rgb(0, 128, 0)") {
+        if ($("#five").css("background-color") === "rgb(0, 128, 0)") {
           console.log("it's green");
         } else {
           $("#five").css("background-color", "yellow");
         }
       } else if ($arrayOfDieNums[0] === "6") {
-        if ($("#six").css("background-color") === "yellow") {
-          alert("Oops, let's roll again. That space is already taken by your own game piece");
-        } else if ($("#six").css("background-color") === "rgb(0, 128, 0)") {
+        if ($("#six").css("background-color") === "rgb(0, 128, 0)") {
           console.log("it's green");
         } else {
           $("#six").css("background-color", "yellow");
         }
       } else if ($arrayOfDieNums[0] === "7") {
-        if ($("#seven").css("background-color") === "yellow") {
-          alert("Oops, let's roll again. That space is already taken by your own game piece");
-        } else if ($("#seven").css("background-color") === "rgb(0, 128, 0)") {
+        if ($("#seven").css("background-color") === "rgb(0, 128, 0)") {
           console.log("it's green");
         } else {
           $("#seven").css("background-color", "yellow");
         }
       } else if ($arrayOfDieNums[0] === "8") {
-        if ($("#eight").css("background-color") === "yellow") {
-          alert("Oops, let's roll again. That space is already taken by your own game piece");
-        } else if ($("#eight").css("background-color") === "rgb(0, 128, 0)") {
+        if ($("#eight").css("background-color") === "rgb(0, 128, 0)") {
           console.log("it's green");
         } else {
           $("#eight").css("background-color", "yellow");
         }
       } else if ($arrayOfDieNums[0] === "9") {
-        if ($("#nine").css("background-color") === "yellow") {
-          alert("Oops, let's roll again. That space is already taken by your own game piece");
-        } else if ($("#nine").css("background-color") === "rgb(0, 128, 0)") {
+        if ($("#nine").css("background-color") === "rgb(0, 128, 0)") {
           console.log("it's green");
         } else {
           $("#nine").css("background-color", "yellow");
@@ -148,95 +166,167 @@ $(() => {
       if (($(event.target).text() === "Player 1") && ($player1[Object.keys($player1)[0]] === "out")) {
         $("#player1-safe-2").css("background-color", "");
         if ($arrayOfDieNums[0] === "1") {
-          $("#one").css("background-color", "green");
+          if ($("#one").css("background-color") === "rgb(0, 128, 0)") {
+            alert("Oops, let's roll again. That space is already taken by your own game piece");
+
+          } else if ($("#one").css("background-color") === "rgb(255, 255, 0)") {
+            console.log("it's yellow");
+          } else {
+            $("#one").css("background-color", "green");
+          }
         } else if ($arrayOfDieNums[0] === "2") {
-          $("#two").css("background-color", "green");
+          if ($("#two").css("background-color") === "rgb(0, 128, 0)") {
+            alert("Oops, let's roll again. That space is already taken by your own game piece");
+
+          } else if ($("#two").css("background-color") === "rgb(255, 255, 0)") {
+            console.log("it's yellow");
+          } else {
+            $("#two").css("background-color", "green");
+          }
         } else if ($arrayOfDieNums[0] === "3") {
-          $("#three").css("background-color", "green");
+          if ($("#three").css("background-color") === "rgb(0, 128, 0)") {
+            alert("Oops, let's roll again. That space is already taken by your own game piece");
+
+          } else if ($("#three").css("background-color") === "rgb(255, 255, 0)") {
+            console.log("it's yellow");
+          } else {
+            $("#three").css("background-color", "green");
+          }
         } else if ($arrayOfDieNums[0] === "4") {
-          $("#four").css("background-color", "green");
+          if ($("#four").css("background-color") === "rgb(0, 128, 0)") {
+            alert("Oops, let's roll again. That space is already taken by your own game piece");
+
+          } else if ($("#four").css("background-color") === "rgb(255, 255, 0)") {
+            console.log("it's yellow");
+          } else {
+            $("#four").css("background-color", "green");
+          }
         } else if ($arrayOfDieNums[0] === "5") {
-          $("#five").css("background-color", "green");
+          if ($("#five").css("background-color") === "rgb(0, 128, 0)") {
+            alert("Oops, let's roll again. That space is already taken by your own game piece");
+
+          } else if ($("#five").css("background-color") === "rgb(255, 255, 0)") {
+            console.log("it's yellow");
+          } else {
+            $("#five").css("background-color", "green");
+          }
         } else if ($arrayOfDieNums[0] === "6") {
-          $("#six").css("background-color", "green");
+          if ($("#six").css("background-color") === "rgb(0, 128, 0)") {
+            alert("Oops, let's roll again. That space is already taken by your own game piece");
+
+          } else if ($("#six").css("background-color") === "rgb(255, 255, 0)") {
+            console.log("it's yellow");
+          } else {
+            $("#six").css("background-color", "green");
+          }
         } else if ($arrayOfDieNums[0] === "7") {
-          $("#seven").css("background-color", "green");
+          if ($("#seven").css("background-color") === "rgb(0, 128, 0)") {
+            alert("Oops, let's roll again. That space is already taken by your own game piece");
+
+          } else if ($("#seven").css("background-color") === "rgb(255, 255, 0)") {
+            console.log("it's yellow");
+          } else {
+            $("#seven").css("background-color", "green");
+          }
         } else if ($arrayOfDieNums[0] === "8") {
-          $("#eight").css("background-color", "green");
+          if ($("#eight").css("background-color") === "rgb(0, 128, 0)") {
+            alert("Oops, let's roll again. That space is already taken by your own game piece");
+
+          } else if ($("#eight").css("background-color") === "rgb(255, 255, 0)") {
+            console.log("it's yellow");
+          } else {
+            $("#eight").css("background-color", "green");
+          }
         } else if ($arrayOfDieNums[0] === "9") {
-          $("#nine").css("background-color", "green");
+          if ($("#nine").css("background-color") === "rgb(0, 128, 0)") {
+            alert("Oops, let's roll again. That space is already taken by your own game piece");
+
+          } else if ($("#nine").css("background-color") === "rgb(255, 255, 0)") {
+            console.log("it's yellow");
+          } else {
+            $("#nine").css("background-color", "green");
+          }
         } else {
           console.log("I'm confused.");
         }
       } else if (($(event.target).text() === "Player 2") && ($player2[Object.keys($player2)[0]] === "out")) {
           $("#player2-safe-2").css("background-color", "");
           if ($arrayOfDieNums[0] === "1") {
-            if ($("#one").css("background-color") === "yellow") {
+            if ($("#one").css("background-color") === "rgb(255, 255, 0)") {
               alert("Oops, let's roll again. That space is already taken by your own game piece");
+
             } else if ($("#one").css("background-color") === "rgb(0, 128, 0)") {
               console.log("it's green");
             } else {
               $("#one").css("background-color", "yellow");
             }
           } else if ($arrayOfDieNums[0] === "2") {
-            if ($("#two").css("background-color") === "yellow") {
+            if ($("#two").css("background-color") === "rgb(255, 255, 0)") {
               alert("Oops, let's roll again. That space is already taken by your own game piece");
+
             } else if ($("#two").css("background-color") === "rgb(0, 128, 0)") {
               console.log("it's green");
             } else {
               $("#two").css("background-color", "yellow");
             }
           } else if ($arrayOfDieNums[0] === "3") {
-            if ($("#three").css("background-color") === "yellow") {
+            if ($("#three").css("background-color") === "rgb(255, 255, 0)") {
               alert("Oops, let's roll again. That space is already taken by your own game piece");
+
             } else if ($("#three").css("background-color") === "rgb(0, 128, 0)") {
               console.log("it's green");
             } else {
               $("#three").css("background-color", "yellow");
             }
           } else if ($arrayOfDieNums[0] === "4") {
-            if ($("#four").css("background-color") === "yellow") {
+            if ($("#four").css("background-color") === "rgb(255, 255, 0)") {
               alert("Oops, let's roll again. That space is already taken by your own game piece");
+
             } else if ($("#four").css("background-color") === "rgb(0, 128, 0)") {
               console.log("it's green");
             } else {
               $("#four").css("background-color", "yellow");
             }
           } else if ($arrayOfDieNums[0] === "5") {
-            if ($("#five").css("background-color") === "yellow") {
+            if ($("#five").css("background-color") === "rgb(255, 255, 0)") {
               alert("Oops, let's roll again. That space is already taken by your own game piece");
+
             } else if ($("#five").css("background-color") === "rgb(0, 128, 0)") {
               console.log("it's green");
             } else {
               $("#five").css("background-color", "yellow");
             }
           } else if ($arrayOfDieNums[0] === "6") {
-            if ($("#six").css("background-color") === "yellow") {
+            if ($("#six").css("background-color") === "rgb(255, 255, 0)") {
               alert("Oops, let's roll again. That space is already taken by your own game piece");
+
             } else if ($("#six").css("background-color") === "rgb(0, 128, 0)") {
               console.log("it's green");
             } else {
               $("#six").css("background-color", "yellow");
             }
           } else if ($arrayOfDieNums[0] === "7") {
-            if ($("#seven").css("background-color") === "yellow") {
+            if ($("#seven").css("background-color") === "rgb(255, 255, 0)") {
               alert("Oops, let's roll again. That space is already taken by your own game piece");
+
             } else if ($("#seven").css("background-color") === "rgb(0, 128, 0)") {
               console.log("it's green");
             } else {
               $("#seven").css("background-color", "yellow");
             }
           } else if ($arrayOfDieNums[0] === "8") {
-            if ($("#eight").css("background-color") === "yellow") {
+            if ($("#eight").css("background-color") === "rgb(255, 255, 0)") {
               alert("Oops, let's roll again. That space is already taken by your own game piece");
+
             } else if ($("#eight").css("background-color") === "rgb(0, 128, 0)") {
               console.log("it's green");
             } else {
               $("#eight").css("background-color", "yellow");
             }
           } else if ($arrayOfDieNums[0] === "9") {
-            if ($("#nine").css("background-color") === "yellow") {
+            if ($("#nine").css("background-color") === "rgb(255, 255, 0)") {
               alert("Oops, let's roll again. That space is already taken by your own game piece");
+
             } else if ($("#nine").css("background-color") === "rgb(0, 128, 0)") {
               console.log("it's green");
             } else {
