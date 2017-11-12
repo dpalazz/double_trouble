@@ -36,9 +36,11 @@ $(() => {
     $arrayOfDieNums = [];
   };
 
-  const movePiece = (event) => {
+  const movePlayerPiece1 = (event) => {
+    console.log("safe");
     if ($(event.target).text() === "Player 1") {
       $("#player1-safe-1").css("background-color", "");
+      $player1[Object.keys($player1)[0]] = "out";
       if ($arrayOfDieNums[0] === "1") {
         $("#one").css("background-color", "green");
       } else if ($arrayOfDieNums[0] === "2") {
@@ -62,6 +64,7 @@ $(() => {
       }
     } else if ($(event.target).text() === "Player 2") {
       $("#player2-safe-1").css("background-color", "");
+      $player2[Object.keys($player2)[0]] = "out";
       if ($arrayOfDieNums[0] === "1") {
         $("#one").css("background-color", "yellow");
       } else if ($arrayOfDieNums[0] === "2") {
@@ -84,17 +87,63 @@ $(() => {
         console.log("I'm confused.");
       }
     } else {
-      console.log("Ummm");
+      console.log("Something isn't right.");
     }
   };
 
-  // const checkArrayOfNum = () => {
-  //
-  // }
+  const movePiece = (event) => {
+    console.log("out");
+      if (($(event.target).text() === "Player 1") && ($player1[Object.keys($player1)[0]] === "out")) {
+        $("#player1-safe-2").css("background-color", "");
+        if ($arrayOfDieNums[0] === "1") {
+          $("#one").css("background-color", "green");
+        } else if ($arrayOfDieNums[0] === "2") {
+          $("#two").css("background-color", "green");
+        } else if ($arrayOfDieNums[0] === "3") {
+          $("#three").css("background-color", "green");
+        } else if ($arrayOfDieNums[0] === "4") {
+          $("#four").css("background-color", "green");
+        } else if ($arrayOfDieNums[0] === "5") {
+          $("#five").css("background-color", "green");
+        } else if ($arrayOfDieNums[0] === "6") {
+          $("#six").css("background-color", "green");
+        } else if ($arrayOfDieNums[0] === "7") {
+          $("#seven").css("background-color", "green");
+        } else if ($arrayOfDieNums[0] === "8") {
+          $("#eight").css("background-color", "green");
+        } else if ($arrayOfDieNums[0] === "9") {
+          $("#nine").css("background-color", "green");
+        } else {
+          console.log("I'm confused.");
+        }
+      } else if (($(event.target).text() === "Player 2") && ($player2[Object.keys($player2)[0]] === "out")) {
+          $("#player2-safe-2").css("background-color", "");
+          if ($arrayOfDieNums[0] === "1") {
+            $("#one").css("background-color", "yellow");
+          } else if ($arrayOfDieNums[0] === "2") {
+            $("#two").css("background-color", "yellow");
+          } else if ($arrayOfDieNums[0] === "3") {
+            $("#three").css("background-color", "yellow");
+          } else if ($arrayOfDieNums[0] === "4") {
+            $("#four").css("background-color", "yellow");
+          } else if ($arrayOfDieNums[0] === "5") {
+            $("#five").css("background-color", "yellow");
+          } else if ($arrayOfDieNums[0] === "6") {
+            $("#six").css("background-color", "yellow");
+          } else if ($arrayOfDieNums[0] === "7") {
+            $("#seven").css("background-color", "yellow");
+          } else if ($arrayOfDieNums[0] === "8") {
+            $("#eight").css("background-color", "yellow");
+          } else if ($arrayOfDieNums[0] === "9") {
+            $("#nine").css("background-color", "yellow");
+          } else {
+            console.log("I'm confused.");
+          }
+        } else {
+          movePlayerPiece1(event);
+        }
+      };
 
-  // **************************************************************************
-  // * Game Play
-  // **************************************************************************
 
   // **************************************************************************
   // * Event Handlers
@@ -132,8 +181,6 @@ $(() => {
   const $closePopper = () => {
     $("#popper-modal").css("display", "none");
   };
-
-
 
   // **************************************************************************
   // * Event Listeners
