@@ -413,8 +413,8 @@ $(() => {
 
   const movePiece = (event) => {
     if (($(event.target).text() === "Player 1") && ($player1[Object.keys($player1)[0]] === "out") && ($player1[Object.keys($player1)[1]] === "out")) {
-      console.log("outie");
-    } else if {
+      console.log("hiyapal");
+    } else if (($(event.target).text() === "Player 1") && ($player1[Object.keys($player1)[0]] === "out") || ($(event.target).text() === "Player 2") && ($player2[Object.keys($player2)[0]] === "out")) {
       movePlayerPiece2(event);
     } else {
       movePlayerPiece1(event);
