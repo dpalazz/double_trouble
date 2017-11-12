@@ -17,9 +17,13 @@ $(() => {
     pawnTwoPosition: "safe"
   };
 
+  let $arrayOfDieNums = [];
+
   const generateRollNumber = () => {
-    let $rollNumber = $("<h1>").text(parseInt(Math.floor(Math.random() * (9-1) + 1)))
+    const $rollNumber = $("<h1>").text(parseInt(Math.floor(Math.random() * (9-1) + 1)))
+    .addClass("die-num")
     .appendTo($("#roll-number-textbox"));
+    $arrayOfDieNums.push($(".die-num").text());
     setTimeout( () => {
         $("#roll-number-modal").css("display", "block");
         setTimeout($closeRollNumberModal, 1000);
@@ -29,7 +33,44 @@ $(() => {
   const $closeRollNumberModal = () => {
     $("#roll-number-modal").css("display", "none");
     $("#roll-number-textbox").text("");
+    startPlay();
+    $arrayOfDieNums = [];
   };
+
+  const startPlay = () => {
+    checkArrayOfNum();
+};
+    // $("#player1-safe-1").css("background-color", "");
+    // if (($(".die-num").text()) === 1) {
+    //   $("#one").css("background-color", "green");
+    // } else if (($(".die-num").text()) === 2) {
+    //   $("#two").css("background-color", "green");
+    // } else if (($(".die-num").text()) === 3) {
+    //   $("#three").css("background-color", "green");
+    // } else if (($(".die-num").text()) === 4) {
+    //   $("#four").css("background-color", "green");
+    // } else if (($(".die-num").text()) === 5) {
+    //   $("#five").css("background-color", "green");
+    // } else if (($(".die-num").text()) === 6) {
+    //   $("#six").css("background-color", "green");
+    // } else if (($(".die-num").text()) === 7) {
+    //   $("#seven").css("background-color", "green");
+    // } else if (($(".die-num").text()) === 8) {
+    //   $("#eight").css("background-color", "green");
+    // } else if (($(".die-num").text()) === 9) {
+    //   $("#nine").css("background-color", "green");
+    // } else {
+    //   console.log("I'm confused.");
+    // }
+  };
+
+  // const checkArrayOfNum = () => {
+  //
+  // }
+
+  // **************************************************************************
+  // * Game Play
+  // **************************************************************************
 
   // **************************************************************************
   // * Event Handlers
@@ -67,9 +108,6 @@ $(() => {
     $("#popper-modal").css("display", "none");
   };
 
-  // **************************************************************************
-  // * Game Play
-  // **************************************************************************
 
 
   // **************************************************************************
