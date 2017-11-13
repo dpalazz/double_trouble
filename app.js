@@ -219,7 +219,7 @@ $(() => {
           $("#player1-safe-1").css("background-color", "green");
         } else {
           $("#eight").css("background-color", "yellow");
-          $$player2.pawnOneLocation.push("8");
+          $player2.pawnOneLocation.push("8");
         }
       } else if ($arrayOfDieNums[0] === "9") {
         if ($("#nine").css("background-color") === "rgb(0, 128, 0)") {
@@ -242,17 +242,27 @@ $(() => {
   const movePlayerPiece2 = (event) => {
     if (($(event.target).text() === "Player 1") && ($player1[Object.keys($player1)[0]] === "out")) {
       $("#player1-safe-2").css("background-color", "");
-      $player1[Object.keys($player1)[1]] = "out";
+      $player1[Object.keys($player1)[2]] = "out";
       if ($arrayOfDieNums[0] === "1") {
         if ($("#one").css("background-color") === "rgb(0, 128, 0)") {
           alert("Oops, let's roll again. That space is already taken by your own game piece");
           $("#player1-safe-2").css("background-color", "green");
         } else if ($("#one").css("background-color") === "rgb(255, 255, 0)") {
           $("#one").css("background-color", "green");
-          $player2[Object.keys($player2)[0]] = "safe";
-          $("#player2-safe-1").css("background-color", "yellow");
+          $player1.pawnTwoLocation.push("1");
+          $player2.pawnOneLocation.push("");
+          if ($player2[Object.keys($player2)[0]] === "out" && $player2[Object.keys($player2)[1]] === "1") {
+            $player2[Object.keys($player2)[1]] === "safe";
+            $("#player2-safe-1").css("background-color", "green");
+          } else if ($player2[Object.keys($player2)[2]] === "out" && $player2[Object.keys($player2)[3]] === "1") {
+            $player2[Object.keys($player2)[2]] === "safe";
+            $("#player2-safe-2").css("background-color", "green");
+          } else {
+            console.log("I'm in a bad, bad place.");
+          }
         } else {
           $("#one").css("background-color", "green");
+          $player1.pawnTwoLocation.push("1");
         }
       } else if ($arrayOfDieNums[0] === "2") {
         if ($("#two").css("background-color") === "rgb(0, 128, 0)") {
@@ -260,10 +270,21 @@ $(() => {
           $("#player1-safe-2").css("background-color", "green");
         } else if ($("#two").css("background-color") === "rgb(255, 255, 0)") {
           $("#two").css("background-color", "green");
-          $player2[Object.keys($player2)[0]] = "safe";
           $("#player2-safe-1").css("background-color", "yellow");
+          $player1.pawnTwoLocation.push("2");
+          $player2.pawnOneLocation.push("");
+          if ($player2[Object.keys($player2)[0]] === "out" && $player2[Object.keys($player2)[1]] === "2") {
+            $player2[Object.keys($player2)[1]] === "safe";
+            $("#player2-safe-1").css("background-color", "green");
+          } else if ($player2[Object.keys($player2)[2]] === "out" && $player2[Object.keys($player2)[3]] === "2") {
+            $player2[Object.keys($player2)[2]] === "safe";
+            $("#player2-safe-2").css("background-color", "green");
+          } else {
+            console.log("I'm in a bad, bad place.");
+          }
         } else {
           $("#two").css("background-color", "green");
+          $player1.pawnTwoLocation.push("2");
         }
       } else if ($arrayOfDieNums[0] === "3") {
         if ($("#three").css("background-color") === "rgb(0, 128, 0)") {
@@ -271,10 +292,21 @@ $(() => {
           $("#player1-safe-2").css("background-color", "green");
         } else if ($("#three").css("background-color") === "rgb(255, 255, 0)") {
           $("#three").css("background-color", "green");
-          $player2[Object.keys($player2)[0]] = "safe";
           $("#player2-safe-1").css("background-color", "yellow");
+          $player1.pawnTwoLocation.push("3");
+          $player2.pawnOneLocation.push("");
+          if ($player2[Object.keys($player2)[0]] === "out" && $player2[Object.keys($player2)[1]] === "3") {
+            $player2[Object.keys($player2)[1]] === "safe";
+            $("#player2-safe-1").css("background-color", "green");
+          } else if ($player2[Object.keys($player2)[2]] === "out" && $player2[Object.keys($player2)[3]] === "3") {
+            $player2[Object.keys($player2)[2]] === "safe";
+            $("#player2-safe-2").css("background-color", "green");
+          } else {
+            console.log("I'm in a bad, bad place.");
+          }
         } else {
           $("#three").css("background-color", "green");
+          $player1.pawnTwoLocation.push("3");
         }
       } else if ($arrayOfDieNums[0] === "4") {
         if ($("#four").css("background-color") === "rgb(0, 128, 0)") {
@@ -282,10 +314,21 @@ $(() => {
           $("#player1-safe-2").css("background-color", "green");
         } else if ($("#four").css("background-color") === "rgb(255, 255, 0)") {
           $("#four").css("background-color", "green");
-          $player2[Object.keys($player2)[0]] = "safe";
           $("#player2-safe-1").css("background-color", "yellow");
+          $player1.pawnTwoLocation.push("4");
+          $player2.pawnOneLocation.push("");
+          if ($player2[Object.keys($player2)[0]] === "out" && $player2[Object.keys($player2)[1]] === "4") {
+            $player2[Object.keys($player2)[1]] === "safe";
+            $("#player2-safe-1").css("background-color", "green");
+          } else if ($player2[Object.keys($player2)[2]] === "out" && $player2[Object.keys($player2)[3]] === "4") {
+            $player2[Object.keys($player2)[2]] === "safe";
+            $("#player2-safe-2").css("background-color", "green");
+          } else {
+            console.log("I'm in a bad, bad place.");
+          }
         } else {
           $("#four").css("background-color", "green");
+          $player1.pawnTwoLocation.push("4");
         }
       } else if ($arrayOfDieNums[0] === "5") {
         if ($("#five").css("background-color") === "rgb(0, 128, 0)") {
@@ -293,10 +336,21 @@ $(() => {
           $("#player1-safe-2").css("background-color", "green");
         } else if ($("#five").css("background-color") === "rgb(255, 255, 0)") {
           $("#five").css("background-color", "green");
-          $player2[Object.keys($player2)[0]] = "safe";
           $("#player2-safe-1").css("background-color", "yellow");
+          $player1.pawnTwoLocation.push("5");
+          $player2.pawnOneLocation.push("");
+          if ($player2[Object.keys($player2)[0]] === "out" && $player2[Object.keys($player2)[1]] === "5") {
+            $player2[Object.keys($player2)[1]] === "safe";
+            $("#player2-safe-1").css("background-color", "green");
+          } else if ($player2[Object.keys($player2)[2]] === "out" && $player2[Object.keys($player2)[3]] === "5") {
+            $player2[Object.keys($player2)[2]] === "safe";
+            $("#player2-safe-2").css("background-color", "green");
+          } else {
+            console.log("I'm in a bad, bad place.");
+          }
         } else {
           $("#five").css("background-color", "green");
+          $player1.pawnTwoLocation.push("5");
         }
       } else if ($arrayOfDieNums[0] === "6") {
         if ($("#six").css("background-color") === "rgb(0, 128, 0)") {
@@ -304,10 +358,21 @@ $(() => {
           $("#player1-safe-2").css("background-color", "green");
         } else if ($("#six").css("background-color") === "rgb(255, 255, 0)") {
           $("#six").css("background-color", "green");
-          $player2[Object.keys($player2)[0]] = "safe";
           $("#player2-safe-1").css("background-color", "yellow");
+          $player1.pawnTwoLocation.push("6");
+          $player2.pawnOneLocation.push("");
+          if ($player2[Object.keys($player2)[0]] === "out" && $player2[Object.keys($player2)[1]] === "6") {
+            $player2[Object.keys($player2)[1]] === "safe";
+            $("#player2-safe-1").css("background-color", "green");
+          } else if ($player2[Object.keys($player2)[2]] === "out" && $player2[Object.keys($player2)[3]] === "6") {
+            $player2[Object.keys($player2)[2]] === "safe";
+            $("#player2-safe-2").css("background-color", "green");
+          } else {
+            console.log("I'm in a bad, bad place.");
+          }
         } else {
           $("#six").css("background-color", "green");
+          $player1.pawnTwoLocation.push("6");
         }
       } else if ($arrayOfDieNums[0] === "7") {
         if ($("#seven").css("background-color") === "rgb(0, 128, 0)") {
@@ -315,10 +380,21 @@ $(() => {
           $("#player1-safe-2").css("background-color", "green");
         } else if ($("#seven").css("background-color") === "rgb(255, 255, 0)") {
           $("#seven").css("background-color", "green");
-          $player2[Object.keys($player2)[0]] = "safe";
           $("#player2-safe-1").css("background-color", "yellow");
+          $player1.pawnTwoLocation.push("7");
+          $player2.pawnOneLocation.push("");
+          if ($player2[Object.keys($player2)[0]] === "out" && $player2[Object.keys($player2)[1]] === "7") {
+            $player2[Object.keys($player2)[1]] === "safe";
+            $("#player2-safe-1").css("background-color", "green");
+          } else if ($player2[Object.keys($player2)[2]] === "out" && $player2[Object.keys($player2)[3]] === "7") {
+            $player2[Object.keys($player2)[2]] === "safe";
+            $("#player2-safe-2").css("background-color", "green");
+          } else {
+            console.log("I'm in a bad, bad place.");
+          }
         } else {
           $("#seven").css("background-color", "green");
+          $player1.pawnTwoLocation.push("7");
         }
       } else if ($arrayOfDieNums[0] === "8") {
         if ($("#eight").css("background-color") === "rgb(0, 128, 0)") {
@@ -326,10 +402,21 @@ $(() => {
           $("#player1-safe-2").css("background-color", "green");
         } else if ($("#eight").css("background-color") === "rgb(255, 255, 0)") {
           $("#eight").css("background-color", "green");
-          $player2[Object.keys($player2)[0]] = "safe";
           $("#player2-safe-1").css("background-color", "yellow");
+          $player1.pawnTwoLocation.push("8");
+          $player2.pawnOneLocation.push("");
+          if ($player2[Object.keys($player2)[0]] === "out" && $player2[Object.keys($player2)[1]] === "8") {
+            $player2[Object.keys($player2)[1]] === "safe";
+            $("#player2-safe-1").css("background-color", "green");
+          } else if ($player2[Object.keys($player2)[2]] === "out" && $player2[Object.keys($player2)[3]] === "8") {
+            $player2[Object.keys($player2)[2]] === "safe";
+            $("#player2-safe-2").css("background-color", "green");
+          } else {
+            console.log("I'm in a bad, bad place.");
+          }
         } else {
           $("#eight").css("background-color", "green");
+          $player1.pawnTwoLocation.push("8");
         }
       } else if ($arrayOfDieNums[0] === "9") {
         if ($("#nine").css("background-color") === "rgb(0, 128, 0)") {
@@ -337,27 +424,48 @@ $(() => {
           $("#player1-safe-2").css("background-color", "green");
         } else if ($("#nine").css("background-color") === "rgb(255, 255, 0)") {
           $("#nine").css("background-color", "green");
-          $player2[Object.keys($player2)[0]] = "safe";
           $("#player2-safe-1").css("background-color", "yellow");
+          $player1.pawnTwoLocation.push("9");
+          $player2.pawnOneLocation.push("");
+          if ($player2[Object.keys($player2)[0]] === "out" && $player2[Object.keys($player2)[1]] === "9") {
+            $player2[Object.keys($player2)[1]] === "safe";
+            $("#player2-safe-1").css("background-color", "green");
+          } else if ($player2[Object.keys($player2)[2]] === "out" && $player2[Object.keys($player2)[3]] === "9") {
+            $player2[Object.keys($player2)[2]] === "safe";
+            $("#player2-safe-2").css("background-color", "green");
+          } else {
+            console.log("I'm in a bad, bad place.");
+          }
         } else {
           $("#nine").css("background-color", "green");
+          $player1.pawnTwoLocation.push("9");
         }
       } else {
         console.log("I'm confused.");
       }
     } else if (($(event.target).text() === "Player 2") && ($player2[Object.keys($player2)[0]] === "out")) {
       $("#player2-safe-2").css("background-color", "");
-      $player2[Object.keys($player1)[1]] = "out";
+      $player2[Object.keys($player1)[2]] = "out";
       if ($arrayOfDieNums[0] === "1") {
         if ($("#one").css("background-color") === "rgb(255, 255, 0)") {
           alert("Oops, let's roll again. That space is already taken by your own game piece");
           $("#player2-safe-2").css("background-color", "yellow");
         } else if ($("#one").css("background-color") === "rgb(0, 128, 0)") {
           $("#one").css("background-color", "yellow");
-          $player1[Object.keys($player1)[0]] = "safe";
-          $("#player1-safe-1").css("background-color", "green");
+          $player2.pawnTwoLocation.push("1");
+          $player1.pawnOneLocation.push("");
+          if ($player1[Object.keys($player1)[0]] === "out" && $player1[Object.keys($player1)[1]] === "1") {
+            $player1[Object.keys($player1)[1]] === "safe";
+            $("#player1-safe-1").css("background-color", "green");
+          } else if ($player1[Object.keys($player1)[2]] === "out" && $player1[Object.keys($player1)[3]] === "1") {
+            $player1[Object.keys($player1)[2]] === "safe";
+            $("#player1-safe-2").css("background-color", "green");
+          } else {
+            console.log("I'm in a bad, bad place.");
+          }
         } else {
           $("#one").css("background-color", "yellow");
+          $player2.pawnTwoLocation.push("1");
         }
       } else if ($arrayOfDieNums[0] === "2") {
         if ($("#two").css("background-color") === "rgb(255, 255, 0)") {
@@ -365,10 +473,20 @@ $(() => {
           $("#player2-safe-2").css("background-color", "yellow");
         } else if ($("#two").css("background-color") === "rgb(0, 128, 0)") {
           $("#two").css("background-color", "yellow");
-          $player1[Object.keys($player1)[0]] = "safe";
-          $("#player1-safe-1").css("background-color", "green");
+          $player2.pawnTwoLocation.push("2");
+          $player1.pawnOneLocation.push("");
+          if ($player1[Object.keys($player1)[0]] === "out" && $player1[Object.keys($player1)[1]] === "2") {
+            $player1[Object.keys($player1)[1]] === "safe";
+            $("#player1-safe-1").css("background-color", "green");
+          } else if ($player1[Object.keys($player1)[2]] === "out" && $player1[Object.keys($player1)[3]] === "2") {
+            $player1[Object.keys($player1)[2]] === "safe";
+            $("#player1-safe-2").css("background-color", "green");
+          } else {
+            console.log("I'm in a bad, bad place.");
+          }
         } else {
           $("#two").css("background-color", "yellow");
+          $player2.pawnTwoLocation.push("2");
         }
       } else if ($arrayOfDieNums[0] === "3") {
         if ($("#three").css("background-color") === "rgb(255, 255, 0)") {
@@ -376,10 +494,20 @@ $(() => {
           $("#player2-safe-2").css("background-color", "yellow");
         } else if ($("#three").css("background-color") === "rgb(0, 128, 0)") {
           $("#three").css("background-color", "yellow");
-          $player1[Object.keys($player1)[0]] = "safe";
-          $("#player1-safe-1").css("background-color", "green");
+          $player2.pawnTwoLocation.push("3");
+          $player1.pawnOneLocation.push("");
+          if ($player1[Object.keys($player1)[0]] === "out" && $player1[Object.keys($player1)[1]] === "3") {
+            $player1[Object.keys($player1)[1]] === "safe";
+            $("#player1-safe-1").css("background-color", "green");
+          } else if ($player1[Object.keys($player1)[2]] === "out" && $player1[Object.keys($player1)[3]] === "3") {
+            $player1[Object.keys($player1)[2]] === "safe";
+            $("#player1-safe-2").css("background-color", "green");
+          } else {
+            console.log("I'm in a bad, bad place.");
+          }
         } else {
           $("#three").css("background-color", "yellow");
+          $player2.pawnTwoLocation.push("3");
         }
       } else if ($arrayOfDieNums[0] === "4") {
         if ($("#four").css("background-color") === "rgb(255, 255, 0)") {
@@ -387,10 +515,20 @@ $(() => {
           $("#player2-safe-2").css("background-color", "yellow");
         } else if ($("#four").css("background-color") === "rgb(0, 128, 0)") {
           $("#four").css("background-color", "yellow");
-          $player1[Object.keys($player1)[0]] = "safe";
-          $("#player1-safe-1").css("background-color", "green");
+          $player2.pawnTwoLocation.push("4");
+          $player1.pawnOneLocation.push("");
+          if ($player1[Object.keys($player1)[0]] === "out" && $player1[Object.keys($player1)[1]] === "4") {
+            $player1[Object.keys($player1)[1]] === "safe";
+            $("#player1-safe-1").css("background-color", "green");
+          } else if ($player1[Object.keys($player1)[2]] === "out" && $player1[Object.keys($player1)[3]] === "4") {
+            $player1[Object.keys($player1)[2]] === "safe";
+            $("#player1-safe-2").css("background-color", "green");
+          } else {
+            console.log("I'm in a bad, bad place.");
+          }
         } else {
           $("#four").css("background-color", "yellow");
+          $player2.pawnTwoLocation.push("4");
         }
       } else if ($arrayOfDieNums[0] === "5") {
         if ($("#five").css("background-color") === "rgb(255, 255, 0)") {
@@ -398,10 +536,20 @@ $(() => {
           $("#player2-safe-2").css("background-color", "yellow");
         } else if ($("#five").css("background-color") === "rgb(0, 128, 0)") {
           $("#five").css("background-color", "yellow");
-          $player1[Object.keys($player1)[0]] = "safe";
-          $("#player1-safe-1").css("background-color", "green");
+          $player2.pawnTwoLocation.push("5");
+          $player1.pawnOneLocation.push("");
+          if ($player1[Object.keys($player1)[0]] === "out" && $player1[Object.keys($player1)[1]] === "5") {
+            $player1[Object.keys($player1)[1]] === "safe";
+            $("#player1-safe-1").css("background-color", "green");
+          } else if ($player1[Object.keys($player1)[2]] === "out" && $player1[Object.keys($player1)[3]] === "5") {
+            $player1[Object.keys($player1)[2]] === "safe";
+            $("#player1-safe-2").css("background-color", "green");
+          } else {
+            console.log("I'm in a bad, bad place.");
+          }
         } else {
           $("#five").css("background-color", "yellow");
+          $player2.pawnTwoLocation.push("5");
         }
       } else if ($arrayOfDieNums[0] === "6") {
         if ($("#six").css("background-color") === "rgb(255, 255, 0)") {
@@ -409,10 +557,20 @@ $(() => {
           $("#player2-safe-2").css("background-color", "yellow");
         } else if ($("#six").css("background-color") === "rgb(0, 128, 0)") {
           $("#six").css("background-color", "yellow");
-          $player1[Object.keys($player1)[0]] = "safe";
-          $("#player1-safe-1").css("background-color", "green");
+          $player2.pawnTwoLocation.push("6");
+          $player1.pawnOneLocation.push("");
+          if ($player1[Object.keys($player1)[0]] === "out" && $player1[Object.keys($player1)[1]] === "6") {
+            $player1[Object.keys($player1)[1]] === "safe";
+            $("#player1-safe-1").css("background-color", "green");
+          } else if ($player1[Object.keys($player1)[2]] === "out" && $player1[Object.keys($player1)[3]] === "6") {
+            $player1[Object.keys($player1)[2]] === "safe";
+            $("#player1-safe-2").css("background-color", "green");
+          } else {
+            console.log("I'm in a bad, bad place.");
+          }
         } else {
           $("#six").css("background-color", "yellow");
+          $player2.pawnTwoLocation.push("6");
         }
       } else if ($arrayOfDieNums[0] === "7") {
         if ($("#seven").css("background-color") === "rgb(255, 255, 0)") {
@@ -420,10 +578,20 @@ $(() => {
           $("#player2-safe-2").css("background-color", "yellow");
         } else if ($("#seven").css("background-color") === "rgb(0, 128, 0)") {
           $("#seven").css("background-color", "yellow");
-          $player1[Object.keys($player1)[0]] = "safe";
-          $("#player1-safe-1").css("background-color", "green");
+          $player2.pawnTwoLocation.push("7");
+          $player1.pawnOneLocation.push("");
+          if ($player1[Object.keys($player1)[0]] === "out" && $player1[Object.keys($player1)[1]] === "7") {
+            $player1[Object.keys($player1)[1]] === "safe";
+            $("#player1-safe-1").css("background-color", "green");
+          } else if ($player1[Object.keys($player1)[2]] === "out" && $player1[Object.keys($player1)[3]] === "7") {
+            $player1[Object.keys($player1)[2]] === "safe";
+            $("#player1-safe-2").css("background-color", "green");
+          } else {
+            console.log("I'm in a bad, bad place.");
+          }
         } else {
           $("#seven").css("background-color", "yellow");
+          $player2.pawnTwoLocation.push("7");
         }
       } else if ($arrayOfDieNums[0] === "8") {
         if ($("#eight").css("background-color") === "rgb(255, 255, 0)") {
@@ -431,10 +599,20 @@ $(() => {
           $("#player2-safe-2").css("background-color", "yellow");
         } else if ($("#eight").css("background-color") === "rgb(0, 128, 0)") {
           $("#eight").css("background-color", "yellow");
-          $player1[Object.keys($player1)[0]] = "safe";
-          $("#player1-safe-1").css("background-color", "green");
+          $player2.pawnTwoLocation.push("8");
+          $player1.pawnOneLocation.push("");
+          if ($player1[Object.keys($player1)[0]] === "out" && $player1[Object.keys($player1)[1]] === "8") {
+            $player1[Object.keys($player1)[1]] === "safe";
+            $("#player1-safe-1").css("background-color", "green");
+          } else if ($player1[Object.keys($player1)[2]] === "out" && $player1[Object.keys($player1)[3]] === "8") {
+            $player1[Object.keys($player1)[2]] === "safe";
+            $("#player1-safe-2").css("background-color", "green");
+          } else {
+            console.log("I'm in a bad, bad place.");
+          }
         } else {
           $("#eight").css("background-color", "yellow");
+          $player2.pawnTwoLocation.push("8");
         }
       } else if ($arrayOfDieNums[0] === "9") {
         if ($("#nine").css("background-color") === "rgb(255, 255, 0)") {
@@ -442,10 +620,20 @@ $(() => {
           $("#player2-safe-2").css("background-color", "yellow");
         } else if ($("#nine").css("background-color") === "rgb(0, 128, 0)") {
           $("#nine").css("background-color", "yellow");
-          $player1[Object.keys($player1)[0]] = "safe";
-          $("#player1-safe-1").css("background-color", "green");
+          $player2.pawnTwoLocation.push("9");
+          $player1.pawnOneLocation.push("");
+          if ($player1[Object.keys($player1)[0]] === "out" && $player1[Object.keys($player1)[1]] === "9") {
+            $player1[Object.keys($player1)[1]] === "safe";
+            $("#player1-safe-1").css("background-color", "green");
+          } else if ($player1[Object.keys($player1)[2]] === "out" && $player1[Object.keys($player1)[3]] === "9") {
+            $player1[Object.keys($player1)[2]] === "safe";
+            $("#player1-safe-2").css("background-color", "green");
+          } else {
+            console.log("I'm in a bad, bad place.");
+          }
         } else {
           $("#nine").css("background-color", "yellow");
+          $player2.pawnTwoLocation.push("9");
         }
       } else {
         console.log("I'm confused.");
@@ -454,11 +642,18 @@ $(() => {
   };
 
   const movePiece = (event) => {
-    if (($(event.target).text() === "Player 1") && ($player1[Object.keys($player1)[0]] === "out") && ($player1[Object.keys($player1)[1]] === "out") || ($(event.target).text() === "Player 2") && ($player2[Object.keys($player2)[0]] === "out") && ($player2[Object.keys($player2)[1]] === "out")) {
-      console.log("hiyapal");
+    if (($(event.target).text() === "Player 1") && ($player1[Object.keys($player1)[0]] === "out") && ($player1[Object.keys($player1)[2]] === "out")) {
+      console.log($player1.pawnOneLocation);
+      console.log($player1.pawnTwoLocation);
+
+    } else if (($(event.target).text() === "Player 2") && ($player2[Object.keys($player2)[0]] === "out") && ($player2[Object.keys($player2)[2]] === "out")) {
+      console.log($player2.pawnOneLocation);
+      console.log($player2.pawnTwoLocation);
     } else if (($(event.target).text() === "Player 1") && ($player1[Object.keys($player1)[0]] === "out") || ($(event.target).text() === "Player 2") && ($player2[Object.keys($player2)[0]] === "out")) {
+      console.log("one piece out");
       movePlayerPiece2(event);
     } else {
+      console.log("zero peices out");
       movePlayerPiece1(event);
     }
   };
