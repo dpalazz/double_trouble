@@ -2,6 +2,7 @@ body {
   background: url("images/background.png");
   background-repeat: no-repeat;
   margin: auto;
+  font-family: "Gotham Rounded", Verdana;
 }
 
 .container {
@@ -120,7 +121,6 @@ body {
 .col-1 > .safe-place {
   display: inline-block;
   margin: 10px auto;
-  /*background: green;*/
 }
 
 .middle-board {
@@ -168,6 +168,11 @@ h1 {
   border-radius: 30px;
   width: 50px;
   height: 50px;
+}
+
+h5 {
+  color: brown;
+  text-align: center;
 }
 
 .col-6 {
