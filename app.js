@@ -306,6 +306,7 @@ $(() => {
       }
     } else if (($(event.target).text() === "Player 2") && ($player2[Object.keys($player2)[0]] === "out")) {
       $("#player2-safe-2").css("background-color", "");
+      $player2[Object.keys($player1)[1]] = "out";
       if ($arrayOfDieNums[0] === "1") {
         if ($("#one").css("background-color") === "rgb(255, 255, 0)") {
           alert("Oops, let's roll again. That space is already taken by your own game piece");
@@ -412,7 +413,7 @@ $(() => {
   };
 
   const movePiece = (event) => {
-    if (($(event.target).text() === "Player 1") && ($player1[Object.keys($player1)[0]] === "out") && ($player1[Object.keys($player1)[1]] === "out")) {
+    if (($(event.target).text() === "Player 1") && ($player1[Object.keys($player1)[0]] === "out") && ($player1[Object.keys($player1)[1]] === "out") || ($(event.target).text() === "Player 2") && ($player2[Object.keys($player2)[0]] === "out") && ($player2[Object.keys($player2)[1]] === "out")) {
       console.log("hiyapal");
     } else if (($(event.target).text() === "Player 1") && ($player1[Object.keys($player1)[0]] === "out") || ($(event.target).text() === "Player 2") && ($player2[Object.keys($player2)[0]] === "out")) {
       movePlayerPiece2(event);
