@@ -9,12 +9,16 @@ $(() => {
 
   const $player1 = {
     pawnOnePosition: "safe",
-    pawnTwoPosition: "safe"
+    pawnOneLocation: [],
+    pawnTwoPosition: "safe",
+    pawnTwoLocation: []
   };
 
   const $player2 = {
     pawnOnePosition: "safe",
-    pawnTwoPosition: "safe"
+    pawnOneLocation: [],
+    pawnTwoPosition: "safe",
+    pawnTwoLocation: []
   };
 
   let $arrayOfDieNums = [];
@@ -44,73 +48,92 @@ $(() => {
         if ($("#one").css("background-color") === "rgb(255, 255, 0)") {
           $("#one").css("background-color", "green");
           $player2[Object.keys($player2)[0]] = "safe";
+          $player1.pawnOneLocation.push("1");
           $("#player2-safe-1").css("background-color", "yellow");
         } else {
           $("#one").css("background-color", "green");
+          $player1.pawnOneLocation.push("1");
         }
       } else if ($arrayOfDieNums[0] === "2") {
         if ($("#two").css("background-color") === "rgb(255, 255, 0)") {
           $("#two").css("background-color", "green");
           $player2[Object.keys($player2)[0]] = "safe";
+          $player1.pawnOneLocation.push("2");
           $("#player2-safe-1").css("background-color", "yellow");
         } else {
           $("#two").css("background-color", "green");
+          $player1.pawnOneLocation.push("2");
         }
       } else if ($arrayOfDieNums[0] === "3") {
         if ($("#three").css("background-color") === "rgb(255, 255, 0)") {
           $("#three").css("background-color", "green");
           $player2[Object.keys($player2)[0]] = "safe";
+          $player1.pawnOneLocation.push("3");
           $("#player2-safe-1").css("background-color", "yellow");
         } else {
           $("#three").css("background-color", "green");
+          $player1.pawnOneLocation.push("3");
         }
       } else if ($arrayOfDieNums[0] === "4") {
         if ($("#four").css("background-color") === "rgb(255, 255, 0)") {
           $("#four").css("background-color", "green");
           $player2[Object.keys($player2)[0]] = "safe";
+          $player1.pawnOneLocation.push("4");
           $("#player2-safe-1").css("background-color", "yellow");
         } else {
           $("#four").css("background-color", "green");
+          $player1.pawnOneLocation.push("4");
         }
       } else if ($arrayOfDieNums[0] === "5") {
         if ($("#five").css("background-color") === "rgb(255, 255, 0)") {
           $("#five").css("background-color", "green");
           $player2[Object.keys($player2)[0]] = "safe";
+          $player1.pawnOneLocation.push("5");
           $("#player2-safe-1").css("background-color", "yellow");
         } else {
           $("#five").css("background-color", "green");
+          $player1.pawnOneLocation.push("5");
         }
       } else if ($arrayOfDieNums[0] === "6") {
         if ($("#six").css("background-color") === "rgb(255, 255, 0)") {
           $("#six").css("background-color", "green");
           $player2[Object.keys($player2)[0]] = "safe";
+          $player1.pawnOneLocation.push("6");
           $("#player2-safe-1").css("background-color", "yellow");
         } else {
           $("#six").css("background-color", "green");
+          $player1.pawnOneLocation.push("6");
+
         }
       } else if ($arrayOfDieNums[0] === "7") {
         if ($("#seven").css("background-color") === "rgb(255, 255, 0)") {
           $("#seven").css("background-color", "green");
           $player2[Object.keys($player2)[0]] = "safe";
+          $player1.pawnOneLocation.push("7");
           $("#player2-safe-1").css("background-color", "yellow");
         } else {
           $("#seven").css("background-color", "green");
+          $player1.pawnOneLocation.push("7");
         }
       } else if ($arrayOfDieNums[0] === "8") {
         if ($("#eight").css("background-color") === "rgb(255, 255, 0)") {
           $("#eight").css("background-color", "green");
           $player2[Object.keys($player2)[0]] = "safe";
+          $player1.pawnOneLocation.push("8");
           $("#player2-safe-1").css("background-color", "yellow");
         } else {
           $("#eight").css("background-color", "green");
+          $player1.pawnOneLocation.push("8");
         }
       } else if ($arrayOfDieNums[0] === "9") {
         if ($("#nine").css("background-color") === "rgb(255, 255, 0)") {
           $("#nine").css("background-color", "green");
           $player2[Object.keys($player2)[0]] = "safe";
+          $player1.pawnOneLocation.push("9");
           $("#player2-safe-1").css("background-color", "yellow");
         } else {
           $("#nine").css("background-color", "green");
+          $player1.pawnOneLocation.push("9");
         }
       } else {
         console.log("I'm confused.");
@@ -122,73 +145,91 @@ $(() => {
         if ($("#one").css("background-color") === "rgb(0, 128, 0)") {
           $("#one").css("background-color", "yellow");
           $player1[Object.keys($player1)[0]] = "safe";
+          $player2.pawnOneLocation.push("1");
           $("#player1-safe-1").css("background-color", "green");
         } else {
           $("#one").css("background-color", "yellow");
+          $player2.pawnOneLocation.push("1");
         }
       } else if ($arrayOfDieNums[0] === "2") {
         if ($("#two").css("background-color") === "rgb(0, 128, 0)") {
           $("#two").css("background-color", "yellow");
           $player1[Object.keys($player1)[0]] = "safe";
+          $player2.pawnOneLocation.push("2");
           $("#player1-safe-1").css("background-color", "green");
         } else {
           $("#two").css("background-color", "yellow");
+          $player2.pawnOneLocation.push("2");
         }
       } else if ($arrayOfDieNums[0] === "3") {
         if ($("#three").css("background-color") === "rgb(0, 128, 0)") {
           $("#three").css("background-color", "yellow");
           $player1[Object.keys($player1)[0]] = "safe";
+          $player2.pawnOneLocation.push("3");
           $("#player1-safe-1").css("background-color", "green");
         } else {
           $("#three").css("background-color", "yellow");
+          $player2.pawnOneLocation.push("3");
         }
       } else if ($arrayOfDieNums[0] === "4") {
         if ($("#four").css("background-color") === "rgb(0, 128, 0)") {
           $("#four").css("background-color", "yellow");
           $player1[Object.keys($player1)[0]] = "safe";
+          $player2.pawnOneLocation.push("4");
           $("#player1-safe-1").css("background-color", "green");
         } else {
           $("#four").css("background-color", "yellow");
+          $player2.pawnOneLocation.push("4");
         }
       } else if ($arrayOfDieNums[0] === "5") {
         if ($("#five").css("background-color") === "rgb(0, 128, 0)") {
           $("#five").css("background-color", "yellow");
           $player1[Object.keys($player1)[0]] = "safe";
+          $player2.pawnOneLocation.push("5");
           $("#player1-safe-1").css("background-color", "green");
         } else {
           $("#five").css("background-color", "yellow");
+          $player2.pawnOneLocation.push("5");
         }
       } else if ($arrayOfDieNums[0] === "6") {
         if ($("#six").css("background-color") === "rgb(0, 128, 0)") {
           $("#six").css("background-color", "yellow");
           $player1[Object.keys($player1)[0]] = "safe";
+          $player2.pawnOneLocation.push("6");
           $("#player1-safe-1").css("background-color", "green");
         } else {
           $("#six").css("background-color", "yellow");
+          $player2.pawnOneLocation.push("6");
         }
       } else if ($arrayOfDieNums[0] === "7") {
         if ($("#seven").css("background-color") === "rgb(0, 128, 0)") {
           $("#seven").css("background-color", "yellow");
           $player1[Object.keys($player1)[0]] = "safe";
+          $player2.pawnOneLocation.push("7");
           $("#player1-safe-1").css("background-color", "green");
         } else {
           $("#seven").css("background-color", "yellow");
+          $player2.pawnOneLocation.push("7");
         }
       } else if ($arrayOfDieNums[0] === "8") {
         if ($("#eight").css("background-color") === "rgb(0, 128, 0)") {
           $("#eight").css("background-color", "yellow");
           $player1[Object.keys($player1)[0]] = "safe";
+          $player2.pawnOneLocation.push("8");
           $("#player1-safe-1").css("background-color", "green");
         } else {
           $("#eight").css("background-color", "yellow");
+          $$player2.pawnOneLocation.push("8");
         }
       } else if ($arrayOfDieNums[0] === "9") {
         if ($("#nine").css("background-color") === "rgb(0, 128, 0)") {
           $("#nine").css("background-color", "yellow");
           $player1[Object.keys($player1)[0]] = "safe";
+          $player2.pawnOneLocation.push("9");
           $("#player1-safe-1").css("background-color", "green");
         } else {
           $("#nine").css("background-color", "yellow");
+          $player2.pawnOneLocation.push("9");
         }
       } else {
         console.log("I'm confused.");
@@ -422,6 +463,11 @@ $(() => {
     }
   };
 
+// if less then or equal to 14 :
+//   Once a piece is in play, its next move should add the roll die number to the current div num and advance to the corresponding div number
+
+// if greater than 14 :
+  // the player's background color will be changed to background-image: linear-gradient(top, red, red 70%, transparent 70%, transparent 100%)
 
   // **************************************************************************
   // * Event Handlers
