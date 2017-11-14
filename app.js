@@ -21,9 +21,9 @@ $(() => {
     console.log($arrayOfDieNums);
     console.log($arrayOfGreenGameCircles);
     console.log($arrayOfYellowGameCircles);
-    console.log(parseInt($player2.pawnOneLocation));
-    console.log(parseInt($player1.pawnOneLocation));
-  }
+    console.log(parseInt($player2.pawnOneLocation[1]));
+    console.log(parseInt($player1.pawnOneLocation[1]));
+  };
   const $winnerWinner = (event) => {
     console.log($event.target + " won the game!");
   }
@@ -179,7 +179,7 @@ $(() => {
         $arrayOfYellowGameCircles.push($("#one"));
       } else {
         $("#one").css("background-color", "yellow");
-        $player1.pawnOneLocation.push("1");
+        $player2.pawnOneLocation.push("1");
         $arrayOfYellowGameCircles.push($("#one"));
       }
     } else if ($arrayOfDieNums[0] === "2") {
@@ -301,7 +301,6 @@ $(() => {
   };
   const gameInPlay = (event) => {
     if (($(event.target).text() === "Player 1")) {
-      logStuff();
       if (parseInt($player1.pawnOneLocation) + parseInt($arrayOfDieNums[0]) === 2) {
         if ($("#two").css("background-color") === "rgb(255, 255, 0)") {
           $("#two").css("background-color", "green");
@@ -497,14 +496,14 @@ $(() => {
           $arrayOfGreenGameCircles[($arrayOfGreenGameCircles.length - 1)].css("background-color", "");
           $arrayOfGreenGameCircles.push($("#fourteen"));
         }
-      } else if (parseInt($player1.pawnOneLocation)) + parseInt($arrayOfDieNums[0]) >= 15) {
+      } else if (parseInt($player1.pawnOneLocation) + parseInt($arrayOfDieNums[0]) >= 15) {
         $winnerWinner();
       } else {
         console.log("WRONG!");
       }
     } else if (($(event.target).text() === "Player 2")) {
       logStuff();
-      if (parseInt($player2.pawnOneLocation) + parseInt($arrayOfDieNums[0]) === 2) {
+      if (parseInt($player1.pawnOneLocation) + parseInt($arrayOfDieNums[0]) === 2) {
         if ($("#two").css("background-color") === "rgb(0, 128, 0)") {
           $("#two").css("background-color", "yellow");
           $player2.pawnOneLocation.push("2");
