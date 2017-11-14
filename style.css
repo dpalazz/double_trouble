@@ -30,24 +30,24 @@ body {
 }
 
 #modal {
-	background-color: rgba(0, 0, 0, .4);
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	z-index: 1;
-	overflow: auto;
+  background-color: rgba(0, 0, 0, .2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: auto;
   display: none;
 }
 
 #modal-textbox {
-	background-color: white;
-	height: 400px;
-	width: 400px;
-	border-radius: 2px;
+  background-color: white;
+  height: 400px;
+  width: 400px;
+  border-radius: 2px;
   padding: 20px;
-	margin: 300px auto;
+  margin: 300px auto;
 }
 
 #close {
@@ -68,36 +68,36 @@ body {
 }
 
 #popper-modal {
-	background-color: rgba(0, 0, 0, 0);
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	z-index: 1;
-	overflow: auto;
+  background-color: rgba(0, 0, 0, 0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: auto;
   display: none;
 }
 
 #roll-number-modal {
-	background-color: rgba(0, 0, 0, .4);
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	z-index: 1;
-	overflow: auto;
+  background-color: rgba(0, 0, 0, .2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: auto;
   display: none;
 }
 
 #roll-number-textbox {
-	background-color: white;
-	height: 400px;
-	width: 400px;
-	border-radius: 2px;
+  background-color: white;
+  height: 400px;
+  width: 400px;
+  border-radius: 2px;
   padding: 20px;
-	margin: 300px auto;
+  margin: 300px auto;
 }
 
 .main-board-container {
@@ -182,4 +182,25 @@ h5 {
 .col-6 > .safe-place {
   display: inline-block;
   margin: 10px auto;
+}
+
+#win-modal {
+  background-color: rgba(0, 0, 0, .2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: auto;
+  display: none;
+}
+
+#win-modal-textbox {
+  background-color: white;
+  height: 400px;
+  width: 400px;
+  border-radius: 2px;
+  padding: 20px;
+  margin: 300px auto;
 }

@@ -4,6 +4,8 @@ $(() => {
   // * Global Variables (Consts, Lets, Functions, Arrays, etc.)
   // **************************************************************************
   const $modal = $("#modal");
+  const $winModal = $("#win-modal");
+  const $windModalTextbox = $("#win-modal-textbox");
   const $closeButton = $("#close");
   const $popper = $(".player");
   let $arrayOfDieNums = [];
@@ -17,15 +19,21 @@ $(() => {
     pawnOnePosition: "safe",
     pawnOneLocation: [],
   };
-  const logStuff = () => {
-    console.log($arrayOfDieNums);
-    console.log($arrayOfGreenGameCircles);
-    console.log($arrayOfYellowGameCircles);
-    console.log(parseInt($player2.pawnOneLocation));
-    console.log(parseInt($player1.pawnOneLocation));
-  };
   const $winnerWinner = (event) => {
-    console.log(($(event.target).text()) + " won the game!");
+    $winModal.css("display", "block");
+    let $winningText = $("<h3>");
+    $winningText.appendTo($("#win-modal").children());
+    $winTimer();
+  }
+  const $closeWinModal = () => {
+    $winModal.css("display", "none");
+    clearTimeout($winTimer);
+  };
+  const $winTimer = () => {
+    setTimeout( () => {
+      $winModal.css("display", "block");
+      setTimeout($closeWinModal, 1000);
+    }, 500);
   }
   const generateRollNumber = () => {
     const $rollNumber = $("<h1>").text(parseInt(Math.floor(Math.random() * (9-1) + 1)))
@@ -34,8 +42,8 @@ $(() => {
     $arrayOfDieNums.push($(".die-num").text());
     setTimeout( () => {
       $("#roll-number-modal").css("display", "block");
-      setTimeout($closeRollNumberModal, 1000);
-    }, 2000);
+      setTimeout($closeRollNumberModal, 500);
+    }, 1000);
   };
   const $closeRollNumberModal = () => {
     $("#roll-number-modal").css("display", "none");
@@ -498,6 +506,7 @@ $(() => {
         }
       } else if (parseInt($player1.pawnOneLocation[($player1.pawnOneLocation.length - 1)]) + parseInt($arrayOfDieNums[0]) >= 15) {
         $arrayOfGreenGameCircles[($arrayOfGreenGameCircles.length - 1)].css("background-color", "");
+        $("#player1-safe-1").css("background-color", "green");
         $winnerWinner(event);
       } else {
         console.log("WRONG!");
@@ -700,6 +709,7 @@ $(() => {
         }
       } else if (parseInt($player2.pawnOneLocation[($player2.pawnOneLocation.length - 1)]) + parseInt($arrayOfDieNums[0]) >= 15) {
         $arrayOfYellowGameCircles[($arrayOfYellowGameCircles.length - 1)].css("background-color", "");
+        $("#player2-safe-1").css("background-color", "yellow");
         $winnerWinner(event);
       } else {
         console.log("Somethin' ain't right, kid.");
@@ -748,7 +758,7 @@ $(() => {
     clearTimeout(timer);
   };
   const timer = () => {
-    setTimeout($closePopper, 1000);
+    setTimeout($closePopper, 500);
   }
   // **************************************************************************
   // * Event Listeners

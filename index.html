@@ -1,111 +1,116 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
-    <title>Double Trouble</title>
-    <script
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Double Trouble</title>
+  <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-    <script src="app.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <img src="images/logo.png" alt="logo" id="logo"></img>
-      <button id="openModal">How To Play</button>
-        <div id="modal">
-          <div id="modal-textbox">
-            <a id="close" href="#">Close</a>
-            <h1>How to Play Double Trouble</h1>
-            <p>Double Trouble is played with two players. Each player starts with two game pieces in their safe places.</p>
-            <p>Players take turns clicking the pop-o-matic die in the center of the game board to reveal a number for which to move their piece.</p>
-            <p>Be careful for double trouble! If another player's piece lands on yours, your piece gets returned to its starting position.</p>
-            <p>The first player to move both pieces around the game board and return them back to their safe places wins.</p>
-            <p>Have fun and remember.. don't get into Double Trouble!</p>
+  <script src="app.js"></script>
+</head>
+<body>
+  <div class="container">
+    <img src="images/logo.png" alt="logo" id="logo"></img>
+    <button id="openModal">How To Play</button>
+    <div id="modal">
+      <div id="modal-textbox">
+        <a id="close" href="#">Close</a>
+        <h1>How to Play Double Trouble</h1>
+        <p>Double Trouble is played with two players. Each player starts with one game piece in its safe place.</p>
+        <p>Player 1 starts and then the players take turns "rolling" the pop-o-matic die to reveal a number for the amount of spaces to their piece will move.</p>
+        <p>Be careful not to get into double trouble! If another player's piece lands on yours, your piece gets returned to its starting position.</p>
+        <p>The first player to move her/his piece around the game board and return it back to its safe places wins!</p>
+        <p>Have fun and remember.. don't get into Double Trouble!</p>
+      </div>
+    </div>
+    <button id="start">Start Game</button>
+    <div class="main-board-container">
+      <div class="top-board">
+        <div class="player" id="player2">
+          <h1>Player 2</h1>
+          <div id="popper-modal">
+            <img src="images/die.png" alt="spinning die">
+          </div>
+          <div id="roll-number-modal">
+            <div id="roll-number-textbox"></div>
           </div>
         </div>
-        <button id="start">Start Game</button>
-      <div class="main-board-container">
-        <div class="top-board">
-          <div class="player" id="player2">
-            <h1>Player 2</h1>
-            <div id="popper-modal">
-                <img src="images/die.png" alt="spinning die">
-            </div>
-            <div id="roll-number-modal">
-              <div id="roll-number-textbox"></div>
-            </div>
-          </div>
-          <div class="col-1">
-            <div class="safe-place" id="player2-safe-1">
+        <div class="col-1">
+          <div class="safe-place" id="player2-safe-1">
             <h5>SAFE</h5>
-            </div>
           </div>
-        </div>
-        <div class="middle-board">
-          <div class="col-2">
-            <div class="board-div" id="six">
-              <h5>6</h5>
-            </div>
-            <div class="board-div" id="five">
-              <h5>5</h5>
-            </div>
-            <div class="board-div" id="four">
-              <h5>4</h5>
-            </div>
-            <div class="board-div" id="three">
-              <h5>3</h5>
-            </div>
-            <div class="board-div" id="two">
-              <h5>2</h5>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="board-div" id="seven">
-              <h5>7</h5>
-            </div>
-            <div class="board-div" id="one">
-              <h5>1</h5>
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="board-div" id="eight">
-              <h5>8</h5>
-            </div>
-            <div class="board-div" id="fourteen">
-              <h5>14</h5>
-            </div>
-          </div>
-          <div class="col-5">
-            <div class="board-div" id="nine">
-              <h5>9</h5>
-            </div>
-            <div class="board-div" id="ten">
-              <h5>10</h5>
-            </div>
-            <div class="board-div" id="eleven">
-              <h5>11</h5>
-            </div>
-            <div class="board-div" id="twelve">
-              <h5>12</h5>
-            </div>
-            <div class="board-div" id="thirteen">
-              <h5>13</h5>
-            </div>
-          </div>
-        </div>
-        <div class="bottom-board">
-          <div class="col-6">
-            <div class="safe-place" id="player1-safe-1">
-              <h5>SAFE</h5>
-            </div>
-          </div>
-          <div class="player" id="player1">
-            <h1>Player 1</h1>
-          </div>
-        </div>
         </div>
       </div>
-  </body>
+      <div class="middle-board">
+        <div class="col-2">
+          <div class="board-div" id="six">
+            <h5>6</h5>
+          </div>
+          <div class="board-div" id="five">
+            <h5>5</h5>
+          </div>
+          <div class="board-div" id="four">
+            <h5>4</h5>
+          </div>
+          <div class="board-div" id="three">
+            <h5>3</h5>
+          </div>
+          <div class="board-div" id="two">
+            <h5>2</h5>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="board-div" id="seven">
+            <h5>7</h5>
+          </div>
+          <div class="board-div" id="one">
+            <h5>1</h5>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="board-div" id="eight">
+            <h5>8</h5>
+          </div>
+          <div class="board-div" id="fourteen">
+            <h5>14</h5>
+          </div>
+        </div>
+        <div class="col-5">
+          <div class="board-div" id="nine">
+            <h5>9</h5>
+          </div>
+          <div class="board-div" id="ten">
+            <h5>10</h5>
+          </div>
+          <div class="board-div" id="eleven">
+            <h5>11</h5>
+          </div>
+          <div class="board-div" id="twelve">
+            <h5>12</h5>
+          </div>
+          <div class="board-div" id="thirteen">
+            <h5>13</h5>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-board">
+        <div class="col-6">
+          <div class="safe-place" id="player1-safe-1">
+            <h5>SAFE</h5>
+          </div>
+        </div>
+        <div class="player" id="player1">
+          <h1>Player 1</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="win-modal">
+      <div id="win-modal-textbox">
+        <h1>Congratulations!</h1>
+      </div>
+  </div>
+</body>
 </html>
