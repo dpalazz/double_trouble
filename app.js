@@ -25,7 +25,7 @@ $(() => {
     console.log(parseInt($player1.pawnOneLocation));
   };
   const $winnerWinner = (event) => {
-    console.log(event.target + " won the game!");
+    console.log(($(event.target).text()) + " won the game!");
   }
   const generateRollNumber = () => {
     const $rollNumber = $("<h1>").text(parseInt(Math.floor(Math.random() * (9-1) + 1)))
