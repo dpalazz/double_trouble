@@ -277,10 +277,8 @@ $(() => {
     }
   };
   const gameInPlay = (event) => {
-    logStuff();
     if (($(event.target).text() === "Player 1")) {
       if (parseInt($player1.pawnOneLocation) + parseInt($arrayOfDieNums[0]) === 2) {
-        logStuff();
         if ($("#two").css("background-color") === "rgb(255, 255, 0)") {
           $("#two").css("background-color", "green");
           $player1.pawnOneLocation.push("2");
@@ -288,7 +286,7 @@ $(() => {
           $player2.pawnOneLocation.push("");
           $player2.pawnOnePosition.push("safe");
           $arrayOfGameCircles[0].css("background-color", "");
-          // $arrayOfGameCircles = "";
+          $arrayOfGameCircles = "";
         } else {
           $("#two").css("background-color", "green");
           $player1.pawnOneLocation.push("2");
@@ -296,164 +294,186 @@ $(() => {
           $arrayOfGameCircles = "";
         }
       } else if (parseInt($player1.pawnOneLocation) + parseInt($arrayOfDieNums[0]) === 3) {
-        console.log($arrayOfGameCircles[0].css("background-color"));
-
         if ($("#three").css("background-color") === "rgb(255, 255, 0)") {
           $("#three").css("background-color", "green");
           $player1.pawnOneLocation.push("3");
           $("#player2-safe-1").css("background-color", "yellow");
           $player2.pawnOneLocation.push("");
           $player2.pawnOnePosition.push("safe");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         } else {
           $("#three").css("background-color", "green");
           $player1.pawnOneLocation.push("3");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         }
       } else if (parseInt($player1.pawnOneLocation) + parseInt($arrayOfDieNums[0]) === 4) {
-        console.log($arrayOfGameCircles[0].css("background-color"));
-
         if ($("#four").css("background-color") === "rgb(255, 255, 0)") {
           $("#four").css("background-color", "green");
           $player1.pawnOneLocation.push("4");
           $("#player2-safe-1").css("background-color", "yellow");
           $player2.pawnOneLocation.push("");
           $player2.pawnOnePosition.push("safe");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         } else {
           $("#four").css("background-color", "green");
           $player1.pawnOneLocation.push("4");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         }
       } else if (parseInt($player1.pawnOneLocation) + parseInt($arrayOfDieNums[0]) === 5) {
-        console.log($arrayOfGameCircles[0].css("background-color"));
-
         if ($("#five").css("background-color") === "rgb(255, 255, 0)") {
           $("#five").css("background-color", "green");
           $player1.pawnOneLocation.push("5");
           $("#player2-safe-1").css("background-color", "yellow");
           $player2.pawnOneLocation.push("");
           $player2.pawnOnePosition.push("safe");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         } else {
           $("#five").css("background-color", "green");
           $player1.pawnOneLocation.push("5");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         }
       } else if (parseInt($player1.pawnOneLocation) + parseInt($arrayOfDieNums[0]) === 6) {
-        console.log($arrayOfGameCircles[0].css("background-color"));
-
         if ($("#six").css("background-color") === "rgb(255, 255, 0)") {
           $("#six").css("background-color", "green");
           $player1.pawnOneLocation.push("6");
           $("#player2-safe-1").css("background-color", "yellow");
           $player2.pawnOneLocation.push("");
           $player2.pawnOnePosition.push("safe");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         } else {
           $("#six").css("background-color", "green");
           $player1.pawnOneLocation.push("6");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         }
       } else if (parseInt($player1.pawnOneLocation) + parseInt($arrayOfDieNums[0]) === 7) {
-        console.log($arrayOfGameCircles[0].css("background-color"));
-
         if ($("#seven").css("background-color") === "rgb(255, 255, 0)") {
           $("#seven").css("background-color", "green");
           $player1.pawnOneLocation.push("7");
           $("#player2-safe-1").css("background-color", "yellow");
           $player2.pawnOneLocation.push("");
           $player2.pawnOnePosition.push("safe");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         } else {
           $("#seven").css("background-color", "green");
           $player1.pawnOneLocation.push("7");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         }
       } else if (parseInt($player1.pawnOneLocation) + parseInt($arrayOfDieNums[0]) === 8) {
-        console.log($arrayOfGameCircles[0].css("background-color"));
-
         if ($("#eight").css("background-color") === "rgb(255, 255, 0)") {
           $("#eight").css("background-color", "green");
           $player1.pawnOneLocation.push("8");
           $("#player2-safe-1").css("background-color", "yellow");
           $player2.pawnOneLocation.push("");
           $player2.pawnOnePosition.push("safe");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         } else {
           $("#eight").css("background-color", "green");
           $player1.pawnOneLocation.push("8");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         }
       } else if (parseInt($player1.pawnOneLocation) + parseInt($arrayOfDieNums[0]) === 9) {
-        console.log($arrayOfGameCircles[0].css("background-color"));
-
         if ($("#nine").css("background-color") === "rgb(255, 255, 0)") {
           $("#nine").css("background-color", "green");
           $player1.pawnOneLocation.push("9");
           $("#player2-safe-1").css("background-color", "yellow");
           $player2.pawnOneLocation.push("");
           $player2.pawnOnePosition.push("safe");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         } else {
           $("#nine").css("background-color", "green");
           $player1.pawnOneLocation.push("9");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         }
       } else if (parseInt($player1.pawnOneLocation) + parseInt($arrayOfDieNums[0]) === 10) {
-        console.log($arrayOfGameCircles[0].css("background-color"));
-
         if ($("#ten").css("background-color") === "rgb(255, 255, 0)") {
           $("#ten").css("background-color", "green");
           $player1.pawnOneLocation.push("10");
           $("#player2-safe-1").css("background-color", "yellow");
           $player2.pawnOneLocation.push("");
           $player2.pawnOnePosition.push("safe");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         } else {
           $("#ten").css("background-color", "green");
           $player1.pawnOneLocation.push("10");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         }
       } else if (parseInt($player1.pawnOneLocation) + parseInt($arrayOfDieNums[0]) === 11) {
-        console.log($arrayOfGameCircles[0].css("background-color"));
-
         if ($("#eleven").css("background-color") === "rgb(255, 255, 0)") {
           $("#eleven").css("background-color", "green");
           $player1.pawnOneLocation.push("11");
           $("#player2-safe-1").css("background-color", "yellow");
           $player2.pawnOneLocation.push("");
           $player2.pawnOnePosition.push("safe");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         } else {
           $("#eleven").css("background-color", "green");
           $player1.pawnOneLocation.push("11");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         }
       } else if (parseInt($player1.pawnOneLocation) + parseInt($arrayOfDieNums[0]) === 12) {
-        console.log($arrayOfGameCircles[0].css("background-color"));
-
         if ($("#twelve").css("background-color") === "rgb(255, 255, 0)") {
           $("#twelve").css("background-color", "green");
           $player1.pawnOneLocation.push("12");
           $("#player2-safe-1").css("background-color", "yellow");
           $player2.pawnOneLocation.push("");
           $player2.pawnOnePosition.push("safe");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         } else {
           $("#twelve").css("background-color", "green");
           $player1.pawnOneLocation.push("12");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         }
       } else if (parseInt($player1.pawnOneLocation) + parseInt($arrayOfDieNums[0]) === 13) {
-        console.log($arrayOfGameCircles[0].css("background-color"));
-
         if ($("#thirteen").css("background-color") === "rgb(255, 255, 0)") {
           $("#thirteen").css("background-color", "green");
           $player1.pawnOneLocation.push("13");
           $("#player2-safe-1").css("background-color", "yellow");
           $player2.pawnOneLocation.push("");
           $player2.pawnOnePosition.push("safe");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         } else {
           $("#thirteen").css("background-color", "green");
           $player1.pawnOneLocation.push("13");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         }
       } else if (parseInt($player1.pawnOneLocation) + parseInt($arrayOfDieNums[0]) === 14) {
-        console.log($arrayOfGameCircles[0].css("background-color"));
-
         if ($("#fourteen").css("background-color") === "rgb(255, 255, 0)") {
           $("#fourteen").css("background-color", "green");
           $player1.pawnOneLocation.push("14");
           $("#player2-safe-1").css("background-color", "yellow");
           $player2.pawnOneLocation.push("");
           $player2.pawnOnePosition.push("safe");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         } else {
           $("#fourteen").css("background-color", "green");
           $player1.pawnOneLocation.push("14");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         }
       } else if (parseInt($player1.pawnOneLocation) + parseInt($arrayOfDieNums[0]) >= 15) {
-        console.log($arrayOfGameCircles[0].css("background-color"));
-
         $winnerWinner();
       } else {
         console.log("WRONG!");
@@ -466,9 +486,13 @@ $(() => {
           $("#player1-safe-1").css("background-color", "green");
           $player1.pawnOneLocation.push("");
           $player1.pawnOnePosition.push("safe");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         } else {
           $("#two").css("background-color", "yellow");
           $player2.pawnOneLocation.push("2");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         }
       } else if (parseInt($player2.pawnOneLocation) + parseInt($arrayOfDieNums[0]) === 3) {
         if ($("#three").css("background-color") === "rgb(0, 128, 0)") {
@@ -477,9 +501,13 @@ $(() => {
           $("#player1-safe-1").css("background-color", "green");
           $player1.pawnOneLocation.push("");
           $player1.pawnOnePosition.push("safe");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         } else {
           $("#three").css("background-color", "yellow");
           $player2.pawnOneLocation.push("3");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         }
       } else if (parseInt($player2.pawnOneLocation) + parseInt($arrayOfDieNums[0]) === 4) {
         if ($("#four").css("background-color") === "rgb(0, 128, 0)") {
@@ -488,9 +516,13 @@ $(() => {
           $("#player1-safe-1").css("background-color", "green");
           $player1.pawnOneLocation.push("");
           $player1.pawnOnePosition.push("safe");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         } else {
           $("#four").css("background-color", "yellow");
           $player2.pawnOneLocation.push("4");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         }
       } else if (parseInt($player2.pawnOneLocation) + parseInt($arrayOfDieNums[0]) === 5) {
         if ($("#five").css("background-color") === "rgb(0, 128, 0)") {
@@ -499,9 +531,13 @@ $(() => {
           $("#player1-safe-1").css("background-color", "green");
           $player1.pawnOneLocation.push("");
           $player1.pawnOnePosition.push("safe");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         } else {
           $("#five").css("background-color", "yellow");
           $player2.pawnOneLocation.push("5");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         }
       } else if (parseInt($player2.pawnOneLocation) + parseInt($arrayOfDieNums[0]) === 6) {
         if ($("#six").css("background-color") === "rgb(0, 128, 0)") {
@@ -510,9 +546,13 @@ $(() => {
           $("#player1-safe-1").css("background-color", "green");
           $player1.pawnOneLocation.push("");
           $player1.pawnOnePosition.push("safe");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         } else {
           $("#six").css("background-color", "yellow");
           $player2.pawnOneLocation.push("6");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         }
       } else if (parseInt($player2.pawnOneLocation) + parseInt($arrayOfDieNums[0]) === 7) {
         if ($("#seven").css("background-color") === "rgb(0, 128, 0)") {
@@ -521,9 +561,13 @@ $(() => {
           $("#player1-safe-1").css("background-color", "green");
           $player1.pawnOneLocation.push("");
           $player1.pawnOnePosition.push("safe");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         } else {
           $("#seven").css("background-color", "yellow");
           $player2.pawnOneLocation.push("7");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         }
       } else if (parseInt($player2.pawnOneLocation) + parseInt($arrayOfDieNums[0]) === 8) {
         if ($("#eight").css("background-color") === "rgb(0, 128, 0)") {
@@ -532,9 +576,13 @@ $(() => {
           $("#player1-safe-1").css("background-color", "green");
           $player1.pawnOneLocation.push("");
           $player1.pawnOnePosition.push("safe");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         } else {
           $("#eight").css("background-color", "yellow");
           $player2.pawnOneLocation.push("8");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         }
       } else if (parseInt($player2.pawnOneLocation) + parseInt($arrayOfDieNums[0]) === 9) {
         if ($("#nine").css("background-color") === "rgb(0, 128, 0)") {
@@ -543,9 +591,13 @@ $(() => {
           $("#player1-safe-1").css("background-color", "green");
           $player1.pawnOneLocation.push("");
           $player1.pawnOnePosition.push("safe");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         } else {
           $("#nine").css("background-color", "yellow");
           $player2.pawnOneLocation.push("9");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         }
       } else if (parseInt($player2.pawnOneLocation) + parseInt($arrayOfDieNums[0]) === 10) {
         if ($("#ten").css("background-color") === "rgb(0, 128, 0)") {
@@ -554,9 +606,13 @@ $(() => {
           $("#player1-safe-1").css("background-color", "green");
           $player1.pawnOneLocation.push("");
           $player1.pawnOnePosition.push("safe");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         } else {
           $("#ten").css("background-color", "yellow");
           $player2.pawnOneLocation.push("10");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         }
       } else if (parseInt($player2.pawnOneLocation) + parseInt($arrayOfDieNums[0]) === 11) {
         if ($("#eleven").css("background-color") === "rgb(0, 128, 0)") {
@@ -565,9 +621,13 @@ $(() => {
           $("#player1-safe-1").css("background-color", "green");
           $player1.pawnOneLocation.push("");
           $player1.pawnOnePosition.push("safe");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         } else {
           $("#eleven").css("background-color", "yellow");
           $player2.pawnOneLocation.push("11");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         }
       } else if (parseInt($player2.pawnOneLocation) + parseInt($arrayOfDieNums[0]) === 12) {
         if ($("#twelve").css("background-color") === "rgb(0, 128, 0)") {
@@ -576,9 +636,13 @@ $(() => {
           $("#player1-safe-1").css("background-color", "green");
           $player1.pawnOneLocation.push("");
           $player1.pawnOnePosition.push("safe");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         } else {
           $("#twelve").css("background-color", "yellow");
           $player2.pawnOneLocation.push("12");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         }
       } else if (parseInt($player2.pawnOneLocation) + parseInt($arrayOfDieNums[0]) === 13) {
         if ($("#thirteen").css("background-color") === "rgb(0, 128, 0)") {
@@ -587,9 +651,13 @@ $(() => {
           $("#player1-safe-1").css("background-color", "green");
           $player1.pawnOneLocation.push("");
           $player1.pawnOnePosition.push("safe");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         } else {
           $("#thirteen").css("background-color", "yellow");
           $player2.pawnOneLocation.push("13");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         }
       } else if (parseInt($player1.pawnOneLocation) + parseInt($arrayOfDieNums[0]) === 14) {
         if ($("#fourteen").css("background-color") === "rgb(0, 128, 0)") {
@@ -598,9 +666,13 @@ $(() => {
           $("#player1-safe-1").css("background-color", "green");
           $player1.pawnOneLocation.push("");
           $player1.pawnOnePosition.push("safe");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         } else {
           $("#fourteen").css("background-color", "green");
           $player2.pawnOneLocation.push("14");
+          $arrayOfGameCircles[0].css("background-color", "");
+          $arrayOfGameCircles = "";
         }
       } else if (parseInt($player1.pawnOneLocation) + parseInt($arrayOfDieNums[0]) >= 15) {
         $winnerWinner();
