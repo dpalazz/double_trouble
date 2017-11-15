@@ -763,6 +763,8 @@ $(() => {
   const startGame = () => {
     $(".col-1").children().css("background-color", "rgb(247, 227, 28)");
     $(".col-6").children().css("background-color", "rgb(105, 184, 90)");
+    $("#start").css("animation-name", "none");
+    $("#player1").css("animation-name", "player-glow");
   };
   // ************************
   // * For the Popper
@@ -775,6 +777,7 @@ $(() => {
   };
   const $closePopper = () => {
     $("#popper-modal").css("display", "none");
+    $("#player1").css("animation-name", "none");
     clearTimeout(timer);
   };
   const timer = () => {
