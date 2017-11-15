@@ -123,10 +123,8 @@ body {
   background-color: white;
   height: 100px;
   width: 100px;
-  border-radius: 2px;
-  padding: 20px;
-  padding-top: 80px;
-  margin: 50% auto;
+  border-radius: 15px;
+  margin: 500px auto;
 }
 
 #roll-number-textbox > h1 {
@@ -282,7 +280,7 @@ h5 {
 
 @keyframes player-glow {
   0% { background-color: rgb(105, 184, 90); box-shadow: 0 0 3px rgb(105, 184, 90); }
-  50% { background-color: #00cc00; box-shadow: 0 0 40px #00cc00; }
+  50% { background-color: #007f00; box-shadow: 0 0 40px #007f00; }
   100% { background-color: rgb(105, 184, 90); box-shadow: 0 0 3px rgb(105, 184, 90); }
 }
 
