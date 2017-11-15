@@ -63,7 +63,7 @@ $(() => {
     setTimeout( () => {
       $("#roll-number-modal").css("display", "block");
       setTimeout($closeRollNumberModal, 500);
-    }, 1000);
+    }, 500);
   };
   const $closeRollNumberModal = () => {
     $("#roll-number-modal").css("display", "none");
