@@ -796,10 +796,12 @@ $(() => {
   // ************************
   // * Start
   // ************************
-  $("#start").on("click", startGame);
-  // ************************
-  // * For the Popper
-  // ************************
-  $(".player").on("click", $popPopper);
+  $("#start").on("click", () => {
+    startGame();
+    // ************************
+    // * For the Popper
+    // ************************
+    $(".player").on("click", $popPopper);
+  });
 
 }); // Closes window.onload
