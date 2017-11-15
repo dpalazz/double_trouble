@@ -7,6 +7,7 @@ $(() => {
   const $winModal = $("#win-modal");
   const $windModalTextbox = $("#win-modal-textbox");
   const $closeButton = $("#close");
+  const $resetBtn = $("#reset");
   const $popper = $(".player");
   let $arrayOfDieNums = [];
   let $arrayOfGreenGameCircles = [];
@@ -19,11 +20,30 @@ $(() => {
     pawnOnePosition: "safe",
     pawnOneLocation: [],
   };
+  const resetGameState = () => {
+    $arrayOfDieNums = [];
+    $arrayOfGreenGameCircles = [];
+    $arrayOfYellowGameCircles= [];
+    $player1.pawnOnePosition = "safe";
+    $player1.pawnOneLocation = [];
+    $player2.pawnOnePosition = "safe";
+    $player2.pawnOneLocation = [];
+  };
+  const popResetButton = () => {
+    $resetBtn.css("display", "block");
+    $resetBtn.on("click", () => {
+      $resetBtn.css("display", "none");
+      startGame();
+      $(".board-div").css("background-color", "");
+      resetGameState();
+    })
+  };
   const $winnerWinner = (event) => {
     $winModal.css("display", "block");
     let $winningText = $("<h3>");
     $winningText.appendTo($("#win-modal").children());
     $winTimer();
+    popResetButton();
   }
   const $closeWinModal = () => {
     $winModal.css("display", "none");
@@ -32,7 +52,7 @@ $(() => {
   const $winTimer = () => {
     setTimeout( () => {
       $winModal.css("display", "block");
-      setTimeout($closeWinModal, 1000);
+      setTimeout($closeWinModal, 5000);
     }, 500);
   }
   const generateRollNumber = () => {
@@ -748,10 +768,10 @@ $(() => {
   // * For the Popper
   // ************************
   const $popPopper = (event) => {
-    $("#popper-modal").css("display", "block");
-    timer();
-    generateRollNumber();
-    makeMoves(event);
+      $("#popper-modal").css("display", "block");
+      timer();
+      generateRollNumber();
+      makeMoves(event);
   };
   const $closePopper = () => {
     $("#popper-modal").css("display", "none");
