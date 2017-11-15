@@ -18,7 +18,7 @@ I hard coded the game board in order to create a square of circles in the middle
 ## Author
 
 * **Dana Palazzo**
- [PurpleBooth](https://github.com/PurpleBooth)
+ [GitHub Account](https://github.com/dpalazz)
 
 ## Acknowledgments
 

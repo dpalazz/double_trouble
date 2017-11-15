@@ -31,6 +31,7 @@ $(() => {
   };
   const popResetButton = () => {
     $resetBtn.css("display", "block");
+    $("#reset").css("animation-name", "reset-btn");
     $resetBtn.on("click", () => {
       $resetBtn.css("display", "none");
       startGame();
@@ -53,7 +54,7 @@ $(() => {
   const $winTimer = () => {
     setTimeout( () => {
       $winModal.css("display", "block");
-      setTimeout($closeWinModal, 10000);
+      setTimeout($closeWinModal, 4000);
     }, 500);
   }
   const generateRollNumber = () => {
