@@ -41,7 +41,8 @@ $(() => {
   const $winnerWinner = (event) => {
     $winModal.css("display", "block");
     let $winningText = $("<h3>");
-    $winningText.appendTo($("#win-modal").children());
+    // let $audio = $("<audio>").attr("src" "images/troublead.mp3");
+    // $("#win-modal-textbox").append($audio);
     $winTimer();
     popResetButton();
   }
@@ -52,7 +53,7 @@ $(() => {
   const $winTimer = () => {
     setTimeout( () => {
       $winModal.css("display", "block");
-      setTimeout($closeWinModal, 6000);
+      setTimeout($closeWinModal, 10000);
     }, 500);
   }
   const generateRollNumber = () => {
