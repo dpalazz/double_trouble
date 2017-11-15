@@ -125,7 +125,8 @@ body {
   width: 100px;
   border-radius: 2px;
   padding: 20px;
-  margin: 300px auto;
+  padding-top: 80px;
+  margin: 50% auto;
 }
 
 #roll-number-textbox > h1 {

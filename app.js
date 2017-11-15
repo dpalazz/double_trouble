@@ -64,7 +64,7 @@ $(() => {
     $arrayOfDieNums.push($(".die-num").text());
     setTimeout( () => {
       $("#roll-number-modal").css("display", "block");
-      setTimeout($closeRollNumberModal, 500);
+      setTimeout($closeRollNumberModal, 1000);
     }, 500);
   };
   const $closeRollNumberModal = () => {
