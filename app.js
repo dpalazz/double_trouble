@@ -42,8 +42,6 @@ $(() => {
   const $winnerWinner = (event) => {
     $winModal.css("display", "block");
     let $winningText = $("<h3>");
-    // let $audio = $("<audio>").attr("src" "images/troublead.mp3");
-    // $("#win-modal-textbox").append($audio);
     $winTimer();
     popResetButton();
   }
